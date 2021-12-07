@@ -11,6 +11,9 @@
     </head>
     <body>
         @include('components.main-nav')
+        <div style="height:2000px"></div>
+        @include('components.footer')
         <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+        <script src="https://kit.fontawesome.com/c432b96f6c.js" crossorigin="anonymous"></script>
     </body>
 </html>
