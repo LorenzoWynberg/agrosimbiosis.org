@@ -1,10 +1,11 @@
 <footer class="text-center text-lg-start text-white">
-  <div class="bg-success bg-opacity-50">  
+  <div class="d-flex bg-success bg-opacity-50">  
     <!-- Grid container -->
     <div class="container p-4">
       <!--Grid row-->
-      <div class="row mt-4">
-        <!--Grid column-->
+      <div class="row mt-4 bg-opacity-100">
+
+        <!--Footer - About - Start-->
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
           <h5 class="text-uppercase mb-4">Acerca de Nosotros</h5>
 
@@ -30,32 +31,32 @@
             <!-- Linkedin -->
           </div>
         </div>
-        <!--Grid column-->
+        <!--Footer - About - End-->
 
-        <!--Grid column-->
+        <!--Footer - Schedule - Start-->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-4">Horario</h5>
 
           <table class="table text-center">
             <tbody class="fw-normal text-white">
               <tr>
-                <td>Lun - Vie:</td>
+                <td class="text-lg-start">Lun - Vie:</td>
                 <td>7am - 3pm</td>
               </tr>
               <tr>
-                <td>Sab - Sab:</td>
-                <td>7am - 1am</td>
+                <td class="text-lg-start">Sab - Sab:</td>
+                <td>7am - 1pm</td>
               </tr>
               <tr>
-                <td>Domingo:</td>
+                <td class="text-lg-start">Domingo:</td>
                 <td>Cerrado</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <!--Grid column-->
+        <!--Footer - Schedule - End-->
 
-        <!--Grid column-->
+        <!--Footer - Contact - Start-->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-4 pb-1">Contacto</h5>
           <ul class="fa-ul mx-0">
@@ -70,18 +71,20 @@
             </li>
           </ul>
         </div>
-        <!--Grid column-->
+        <!--Footer - Contact - End-->
+
       </div>
-      <!--Grid row-->
+      <!--Grid row - End-->
     </div>
-    <!-- Grid container -->
+    <!-- Grid container - End -->
   </div>
-  <!-- Copyright -->
+
+  <!-- Footer - Copyright - Start -->
   <div class="copyright">
-    <div class="text-center p-3 bg-primary bg-opacity-50 text-white">
-      © 2021 Copyright:
+    <div class="text-center p-3 bg-info text-white">
+      &copy; 2021 Copyright:
       <a class="text-white" href="https://mdbootstrap.com/">AgroSimbiosis.org</a>
     </div>
   </div>
-  <!-- Copyright -->
+  <!-- Footer - Copyright - End -->
 </footer>
