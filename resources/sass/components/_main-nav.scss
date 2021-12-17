@@ -12,8 +12,10 @@ $nav-color: #5ca57f;
 		font-size: 1.5rem;
 	}
 	.nav-link {
+		transition: background-color .25s ease-in;
 		&.active, &:hover {
 			background-color: $success;
+			transition: background-color .25s;
 		}
 	}
 }
