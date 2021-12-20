@@ -3,4 +3,12 @@ $font-family-sans-serif: 'Poppins', sans-serif;
 $font-family-monospace: Monaco;
 $info: #85b6fd;
 @import "./node_modules/bootstrap/scss/bootstrap";
-@import "components/components"
+@import "components/components";
+
+body{
+	padding-top: 56px;
+}
+
+#hero{
+	background-image: url('/imgs/heros/home.jpg');
+}
