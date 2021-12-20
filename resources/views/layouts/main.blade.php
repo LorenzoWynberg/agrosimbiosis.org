@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>@yield('title') - Agrosimbiosis</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
   </head>
   <body id="@yield('id')">
     @include('components.main-nav')
@@ -13,7 +13,7 @@
       @yield('content')
     </div>
     @include('components.footer')
-    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
     <script src="https://kit.fontawesome.com/c432b96f6c.js" crossorigin="anonymous"></script>
     @yield('scripts')
   </body>

@@ -1,4 +1,6 @@
-const mix = require('laravel-mix');
+let mix = require("laravel-mix");
+let ImageminPlugin = require("imagemin-webpack-plugin").default;
+let CopyWebpackPlugin = require("copy-webpack-plugin");
 
 /*
  |--------------------------------------------------------------------------
@@ -6,10 +8,27 @@ const mix = require('laravel-mix');
  |--------------------------------------------------------------------------
  |
  | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel applications. By default, we are compiling the CSS
+ | for your Laravel application. By default, we are compiling the Sass
  | file for the application as well as bundling up all the JS files.
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.sass', 'public/css', {/* plugin options */}, {/* postcss options */});
+mix.webpackConfig({
+    plugins: [
+        // Copy the images folder and optimize all the images
+        new CopyWebpackPlugin({
+		      patterns: [
+		        { from: "resources/imgs", to: "imgs" },
+		      ],
+    		}),
+        new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
+    ]
+}).options({processCssUrls: false});
+
+mix.js("resources/js/app.js", "public/js")
+	.sass("resources/sass/app.sass", "public/css")
+	.version()
+	.browserSync({
+      proxy: 'localhost',
+      files: ['./public/css/*.css', './public/js/*.js', './resources/views/**/*.blade.php']
+  });
