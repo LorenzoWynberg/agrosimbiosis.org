@@ -1,0 +1,43 @@
+$nav-color: #5ca57f
+
+#main-nav
+	background-color: $nav-color
+	border-bottom: 1px solid $success
+	.navbar-toggler
+		border-color: #eee
+		&:focus
+			box-shadow: 0 0 0 $spacer/16
+	.navbar-icon
+		font-size: 1.5rem
+	.nav-link
+		transition: background-color .25s ease-in
+		&.active, &:hover
+			background-color: $success
+			transition: background-color .25s
+
+@include media-breakpoint-up(lg)
+	#main-nav 
+		.nav-item
+			margin-left: $spacer
+			.nav-link 
+				border-radius: $border-radius
+
+@include media-breakpoint-down(lg)
+	#main-nav
+		.navbar-collapse
+			border-left: 1px solid $success
+			border-bottom: 1px solid $success
+			width: 220px
+			position: fixed
+			top: 56px
+			right: 0
+			background-color: $nav-color
+			border-radius: 0 0 0 $border-radius
+			.navbar-nav
+				background-color: transparent
+		.nav-item
+			&:last-child .nav-link
+				border-radius: 0 0 0 $border-radius
+			.nav-link
+				padding-left: $spacer
+				padding-right: $spacer
