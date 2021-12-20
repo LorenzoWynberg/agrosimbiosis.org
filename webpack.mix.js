@@ -17,9 +17,9 @@ mix.webpackConfig({
     plugins: [
         // Copy the images folder and optimize all the images
         new CopyWebpackPlugin({
-		      patterns: [
-		        { from: "resources/imgs", to: "imgs" },
-		      ],
+                patterns: [
+    		        { from: "resources/imgs", to: "imgs" },
+                ],
     		}),
         new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
     ]
@@ -29,6 +29,7 @@ mix.js("resources/js/app.js", "public/js")
 	.sass("resources/sass/app.sass", "public/css")
 	.version()
 	.browserSync({
-      proxy: 'localhost',
-      files: ['./public/css/*.css', './public/js/*.js', './resources/views/**/*.blade.php']
+        open: false,
+        proxy: 'localhost',
+        files: ['./public/css/*.css', './public/js/*.js', './resources/views/**/*.blade.php']
   });
