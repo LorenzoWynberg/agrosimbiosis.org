@@ -10,4 +10,9 @@ class StaticPagesController extends Controller
     {
         return view('pages.home');
     }
+
+    public function mision()
+    {
+        return view('pages.mision');
+    }
 }

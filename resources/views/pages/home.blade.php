@@ -4,6 +4,7 @@
 @section('id', 'home')
 
 @section('content')
+
 <div id="hero">
   <div class="overlay">
     <div class="container-fluid">
@@ -23,4 +24,9 @@
     </div>
   </div>
 </div>
+
+<div id="mision">
+
+</div>
+
 @stop
