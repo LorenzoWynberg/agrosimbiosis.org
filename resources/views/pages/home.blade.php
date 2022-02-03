@@ -6,7 +6,7 @@
 @section('content')
 
 <div id="hero">
-  <div class="overlay">
+  <div class="overlay-gradient">
     <div class="container-fluid">
       <div class="row align-items-end pt-5 pb-5">
         <div class="col-9 mx-auto text-center">
@@ -27,7 +27,7 @@
 
 <div id="pillars">
   <div class="container">
-    <div class="row text-center">
+    <div class="row text-center my-5">
       <div class="col-12 col-sm-6 col-lg-3 my-5">
        <img src="{{ asset('imgs/icons/health.png') }}" width="200" alt="">
        <h3 class="mt-2">Salud</h3>
@@ -51,8 +51,17 @@
   </div>
 </div>
 
+<div id="hero-2" class="hero parallax"></div>
+
 <div id="mision" class="py-5">
-  
+  <div class="container">
+    <div class="row mt-5 mb-3">
+      <div class="col-md-8">
+        <h2>Misión</h2>
+        <p>Somos una organización que busca rescatar practicas ancestrales que se han ido perdiendo al igual que implementar practicas mas modernas con un enfoque en traer la mayor nutricion posible al igual que regnerar los suelos.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 @stop
