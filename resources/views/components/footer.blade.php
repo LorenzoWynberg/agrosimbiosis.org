@@ -58,7 +58,7 @@
         <!--Footer - Schedule - End-->
 
         <!--Footer - Contact - Start-->
-        <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+        <div class="col-md-6 col-lg-3 offset-lg-1 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-3 pb-1">Contacto</h5>
           <ul class="fa-ul mx-0">
             <li class="mb-3">
