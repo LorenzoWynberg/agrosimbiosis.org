@@ -1,41 +1,42 @@
-<footer class="text-center text-lg-start text-white">
+<footer id="footer" class="text-center text-lg-start text-white">
   <div class="d-flex bg-success bg-opacity-50">  
     <!-- Grid container -->
     <div class="container p-4">
       <!--Grid row-->
       <div class="row mt-4 bg-opacity-100">
 
-        <!--Footer - About - Start-->
+        <!--Footer - Socials/Donations - Start-->
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-          <h5 class="text-uppercase mb-4">Acerca de Nosotros</h5>
-
-          <p>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-            voluptatum deleniti atque corrupti.
-          </p>
-
-          <p>
-            Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-            molestias.
-          </p>
-
-          <div class="mt-4">
+          <h5 class="text-uppercase mb-3">Redes Sociales</h5>
+          <div class="mb-4">
             <!-- Facebook -->
-            <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-facebook-f"></i></a>
-            <!-- Dribbble -->
-            <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-instagram"></i></a>
+            <a type="button" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/fb.png') }}" width="30px" alt=""></a>
+            <!-- Instagram -->
+            <a type="button" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/ig.png') }}" width="30px" alt=""></a>
+            <!-- Youtube -->
+            <a type="button" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/yt.png') }}" width="30px" alt=""></a>
             <!-- Twitter -->
-            <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-youtube"></i></a>
-            <!-- Google + -->
-            <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-twitter"></i></a>
-            <!-- Linkedin -->
+            <a type="button" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/twitter.png') }}" width="30px" alt=""></a>
+          </div>
+          <h5 class="text-uppercase mb-3">Donaciones</h5>
+          <div>
+            <!-- BTC -->
+            <button type="button" class="btn btn-floating btn-light p-2" data-bs-toggle="modal" data-bs-target="#btc-modal">
+              <img src="{{ asset('imgs/icons/btc.png') }}" width="30x" alt="">
+            </button>
+            <button type="button" class="btn btn-floating btn-light p-2" data-bs-toggle="modal" data-bs-target="#eth-modal">
+              <img src="{{ asset('imgs/icons/eth.png') }}" width="30px" alt="">
+            </button>
+            <button type="button" class="btn btn-floating btn-light p-2" data-bs-toggle="modal" data-bs-target="#bnb-modal">
+              <img src="{{ asset('imgs/icons/bnb.png') }}" width="30px" alt="">
+            </button>
           </div>
         </div>
-        <!--Footer - About - End-->
+        <!--Footer - Socials/Donations - End-->
 
         <!--Footer - Schedule - Start-->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4">Horario</h5>
+          <h5 class="text-uppercase">Horario</h5>
 
           <table class="table text-center">
             <tbody class="fw-normal text-white">
@@ -58,7 +59,7 @@
 
         <!--Footer - Contact - Start-->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4 pb-1">Contacto</h5>
+          <h5 class="text-uppercase mb-3 pb-1">Contacto</h5>
           <ul class="fa-ul mx-0">
             <li class="mb-3">
               <span class="fa-li position-static"><i class="fas fa-phone"></i></span><span class="ms-2">+506 8329-3003</span>
@@ -82,8 +83,8 @@
   <!-- Footer - Copyright - Start -->
   <div class="copyright">
     <div class="text-center p-3 bg-info text-white">
-      &copy; 2021 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">AgroSimbiosis.org</a>
+      &copy; {{ date("Y") }} Derechos De Autor:
+      <a class="text-white" href="{{ route('home') }}">AgroSimbiosis.org</a>
     </div>
   </div>
   <!-- Footer - Copyright - End -->
