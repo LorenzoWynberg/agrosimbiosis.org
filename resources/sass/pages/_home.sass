@@ -4,7 +4,11 @@
 	#hero-2
 		background-image: url('/imgs/heros/dasha.jpg')
 		height: 500px
-		background-position: 0 -250px
 	#hero-3
 		background-image: url('/imgs/heros/saf.jpg')
 		height: 500px
+
+@include media-breakpoint-up(lg)
+	#home
+		#hero-2
+			background-position: 0 -250px
