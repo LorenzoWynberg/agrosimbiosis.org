@@ -53,7 +53,7 @@
 
 <div id="hero-2" class="hero parallax"></div>
 
-<div id="mision" class="py-5">
+<div id="mission" class="py-5">
   <div class="container">
     <div class="row mt-5 mb-3">
       <div class="col-md-8">
