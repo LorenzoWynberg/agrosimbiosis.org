@@ -6,7 +6,7 @@
       <div class="row mt-4 bg-opacity-100">
 
         <!--Footer - Socials/Donations - Start-->
-        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        <div class="col-md-12 col-lg-3 mb-4 mb-lg-0">
           <h5 class="text-uppercase mb-3">Redes Sociales</h5>
           <div class="mb-4">
             <!-- Facebook -->
@@ -35,7 +35,7 @@
         <!--Footer - Socials/Donations - End-->
 
         <!--Footer - Schedule - Start-->
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <div class="col-md-6 col-lg-5 mb-4 mb-md-0">
           <h5 class="text-uppercase">Horario</h5>
 
           <table class="table text-center">
@@ -58,7 +58,7 @@
         <!--Footer - Schedule - End-->
 
         <!--Footer - Contact - Start-->
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-3 pb-1">Contacto</h5>
           <ul class="fa-ul mx-0">
             <li class="mb-3">
