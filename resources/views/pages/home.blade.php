@@ -53,12 +53,29 @@
 
 <div id="hero-2" class="hero parallax"></div>
 
+<div id="about" class="py-5">
+  <div class="container py-5">
+    <div class="row mt-5 mb-3">
+      <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <h2>Acerca de Nosotros</h2>
+        <p>Agrosimbiosis nace con una idea de un modelo holistico que busca integrar la educación, alimentación saludable y un espacio de convivencia comunitario en medio de la ciudad.</p>
+        <p>La idea fue tomando forma en la feria de inovacion y sostenibilidad impartida en la <a href="https://www.earth.ac.cr/es/">Universidad Earth</a>, Guacimo, Costa Rica.</p>
+        <p>El proyecto fue uno de los ganadores de la feria financiada por <a href="http://www.sustainabilitylabs.org/">Sustainable Laboratory</a>, empresa israelita. Con estos fondos se planta la semilla y nace Agrosimbiosis</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="hero-3" class="hero parallax"></div>
+
 <div id="mission" class="py-5">
   <div class="container">
     <div class="row mt-5 mb-3">
-      <div class="col-md-8">
+      <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
         <h2>Misión</h2>
-        <p>Somos una organización que busca rescatar practicas ancestrales que se han ido perdiendo al igual que implementar practicas mas modernas con un enfoque en traer la mayor nutricion posible al igual que regnerar los suelos.</p>
+        <p>Como respuesta a la desvalorizacion de la agricultura y la perdida de sus practicas ancestrales a los daños que la agricultura ha generado a los ecosistemas naturales, a la salud y el buen vivir de la humanidad.</p>
+        <p>Decidimos soñar en la creacion de un sistema agricola integrado y en armonia con los ecosistemas aun en medio de la ciudad, que brindara alimento sano a la comunidad y habitad seguro a las especies desplazadas por la industralizacion.</p>
+        <p>Tras haber sido uno de los ganadores en la feria de innovacion y sostenibilidad, el proyecto agrosimbiosis emprende un camino para cumplir el sueño. Gracias al apoyo de la <a href="https://www.earth.ac.cr/es/">Universidad Earth</a> y <a href="http://www.sustainabilitylabs.org/">Sustainable Laboratory</a>.</p>
       </div>
     </div>
   </div>
