@@ -5,6 +5,8 @@
 
 @section('content')
 
+@include('components.main-nav', ['active'=>'home'])
+
 <div id="hero">
   <div class="overlay-gradient">
     <div class="container-fluid">
@@ -88,26 +90,12 @@
     <h2 class="text-center py-3">Nuestro Equipo</h2>
     <div class="row">
 
-      <a href="#" class="team-member col-md-4 my-5 text-body">
+      <a href="{{ route('dasha') }}" class="team-member col-md-4 my-5 text-body">
         <div class="row d-flex align-items-center">
           <div class="col-4 offset-1 offset-md-0 col-md-12 d-flex align-items-center">
-            <img src="{{ asset('imgs/team/andy.jpg') }}" class="img-fluid rounded-circle" alt="">
-          </div>
-          <div class="col-7 col-md-12 text-md-center">
-            <h5 class="pt-md-3">Andres Charpentier</h5>
-            <h6>Ingeniero Agrónomo</h6>
-          </div>
-        </div>
-      </a>
-
-      <hr class="my-0 d-md-none">
-      
-      <a href="#" class="team-member col-md-4 my-5 text-body">
-        <div class="row d-flex align-items-center">
-          <div class="col-4 col-md-12 order-2 order-md-1 d-flex align-items-center">
             <img src="{{ asset('imgs/team/dasha.jpg') }}" class="img-fluid rounded-circle" alt="">
           </div>
-          <div class="col-7 col-md-12 order-1 order-md-2 text-end text-md-center">
+          <div class="col-7 col-md-12 text-md-center">
             <h5 class="pt-md-3">Dasha Montcalm</h5>
             <h6>Ingeniera Agrónoma</h6>
           </div>
@@ -116,7 +104,21 @@
 
       <hr class="my-0 d-md-none">
       
-      <a href="#" class="team-member col-md-4 my-5 text-body">
+      <a href="{{ route('andy') }}" class="team-member col-md-4 my-5 text-body">
+        <div class="row d-flex align-items-center">
+          <div class="col-4 col-md-12 order-2 order-md-1 d-flex align-items-center">
+            <img src="{{ asset('imgs/team/andy.jpg') }}" class="img-fluid rounded-circle" alt="">
+          </div>
+          <div class="col-7 col-md-12 order-1 order-md-2 text-end text-md-center">
+            <h5 class="pt-md-3">Andres Charpentier</h5>
+            <h6>Ingeniero Agrónomo</h6>
+          </div>
+        </div>
+      </a>
+
+      <hr class="my-0 d-md-none">
+      
+      <a href="{{ route('lore') }}" class="team-member col-md-4 my-5 text-body">
         <div class="row d-flex align-items-center">
           <div class="col-4 offset-1 offset-md-0 col-md-12 d-flex align-items-center">
             <img src="{{ asset('imgs/team/lore.jpg') }}" class="img-fluid rounded-circle" alt="">

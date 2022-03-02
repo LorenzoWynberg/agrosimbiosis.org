@@ -7,16 +7,16 @@
     <div class="collapse navbar-collapse" id="nav-links">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Inicio</a>
+          <a class="nav-link{{ isset($active) && $active == 'home' ? ' active' : ''}}" aria-current="page" href="{{ route('home') }}">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mision</a>
+          <a class="nav-link{{ isset($active) && $active == 'team' ? ' active' : ''}}" href="{{route('home') . '/#team' }}">Equipo</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
+          <a class="nav-link{{ isset($active) && $active == 'contact' ? ' active' : ''}}" href="#">Contacto</a>
         </li>
       </ul>
       <form class="d-none d-flex d-lg-flex">

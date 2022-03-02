@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
   </head>
   <body id="@yield('id')">
-    @include('components.main-nav')
     <div id="wrapper">
       @yield('content')
     </div>

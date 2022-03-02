@@ -11,8 +11,18 @@ class StaticPagesController extends Controller
         return view('pages.home');
     }
 
-    public function mision()
+    public function andy()
     {
-        return view('pages.mision');
+        return view('pages.team.andy');
+    }
+
+    public function lore()
+    {
+        return view('pages.team.lore');
+    }
+
+    public function dasha()
+    {
+        return view('pages.team.dasha');
     }
 }
