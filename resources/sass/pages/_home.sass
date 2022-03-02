@@ -7,8 +7,29 @@
 	#hero-3
 		background-image: url('/imgs/heros/saf.jpg')
 		height: 500px
+	#hero-4
+		background-image: url('/imgs/heros/project.jpg')
+		height: 500px
+	#team
+		.team-member
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+		hr
+			width: 85%
+			margin: auto
+
+@include media-breakpoint-up(sm)
+	#home
+		#team
+			hr
+				width: 100%
 
 @include media-breakpoint-up(lg)
 	#home
 		#hero-2
 			background-position: 0 -250px
+		#team
+			img
+				max-width: 280px
+				margin: auto
