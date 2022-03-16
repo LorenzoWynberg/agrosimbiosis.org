@@ -1,9 +1,9 @@
 <footer id="footer" class="text-center text-lg-start text-white">
-  <div class="d-flex bg-success bg-opacity-50">  
+  <div class="d-flex bg-secondary">  
     <!-- Grid container -->
     <div class="container p-4">
       <!--Grid row-->
-      <div class="row mt-4 bg-opacity-100">
+      <div class="row mt-4">
 
         <!--Footer - Socials/Donations - Start-->
         <div class="col-md-12 col-lg-3 mb-4 mb-lg-0">
