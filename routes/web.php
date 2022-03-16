@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\StaticPagesController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
@@ -23,5 +24,10 @@ Route::get('/equipo/lorenzo-wynberg', [StaticPagesController::class, 'lore'])->n
 Route::get('/equipo/dasha-montcalm', [StaticPagesController::class, 'dasha'])->name('dasha');
 
 //Auth
-Route::any('/registro', [AuthController::class, 'register'])->name('register');
-Route::any('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/registro', [AuthController::class, 'register'])->name('register')->middleware('guest');
+Route::post('/registro', [AuthController::class, 'registerPost']);
+
+Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
+Route::post('/login', [AuthController::class, 'loginPost']);
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');

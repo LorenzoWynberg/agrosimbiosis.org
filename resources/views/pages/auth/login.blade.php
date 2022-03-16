@@ -12,7 +12,8 @@
       <div id="login-card" class="card shadow-sm">
         <div class="card-body">
           
-          <h2 class="text-center text-info mt-2 mb-3">Inicia Sesion</h2>
+          <!-- Title -->
+          <h2 class="text-center text-info mt-2 mb-3">Inicia Sesión</h2>
 
           <!-- Spacer -->
           <hr class="text-muted mt-0 mb-4">
@@ -42,15 +43,34 @@
 
                 <!-- Email -->
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Correo">
+
+                  <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="Correo" 
+                  class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" 
+                  value="{{ isset($errors) && $errors->count() ? old('email') : '' }}">
                   <label for="email">Correo</label>
+                  <div class="invalid-feedback">{!! $errors->first('email') ?? '' !!}</div>
+
                 </div>
+                <!-- Email - END -->
 
                 <!-- Password -->
                 <div class="form-floating mb-3">
-                  <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+
+                  <input 
+                  type="password" 
+                  id="password" 
+                  name="password" 
+                  placeholder="Contraseña" 
+                  class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
                   <label for="password">Contraseña</label>
+                  <div class="invalid-feedback">{!! $errors->first('password') ?? '' !!}</div>
+
                 </div>
+                <!-- Password - END -->
 
                 <!-- Submit -->
                 <div class="text-end">
@@ -58,11 +78,12 @@
                   <button type="submit" class="btn btn-secondary btn-lg text-white">
                   	<span class="fa fa-check me-2"></span>Continuar
                   </button>
-                </div>
+                <!-- Submit - END -->  
 
+                </div>
               </form>
             </div>
-
+            <!-- Form - END -->
           </div>
         </div>
       </div>
