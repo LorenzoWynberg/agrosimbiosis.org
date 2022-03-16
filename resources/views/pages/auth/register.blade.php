@@ -20,7 +20,7 @@
           <div class="row d-flex align-items-center">
 
             <!-- Socials -->
-            <div class="col-12 col-lg-6 order-lg-3">
+            <div class="col-12 col-lg-5 order-lg-3">
 
               <!-- Facebook -->
               <a href="#" class="btn btn-info btn-lg h5 text-white d-block mb-3"><span class="fa fa-facebook me-2"></span> Facebook</a>
@@ -37,7 +37,7 @@
             </div>
 
             <!-- Form -->
-            <div class="col-12 col-lg-6 py-lg-3 order-lg-1">
+            <div class="col-12 col-lg-7 py-lg-3 order-lg-1">
               <form action="{{ route('register') }}" method="post">
 
                 <!-- Name -->
