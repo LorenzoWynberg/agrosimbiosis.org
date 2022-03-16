@@ -10,13 +10,13 @@
           <h5 class="text-uppercase mb-3">Redes Sociales</h5>
           <div class="mb-4">
             <!-- Facebook -->
-            <a type="button" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/fb.png') }}" width="30px" alt=""></a>
+            <a href="#" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/fb.png') }}" width="30px" alt=""></a>
             <!-- Instagram -->
-            <a type="button" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/ig.png') }}" width="30px" alt=""></a>
+            <a href="#" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/ig.png') }}" width="30px" alt=""></a>
             <!-- Youtube -->
-            <a type="button" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/yt.png') }}" width="30px" alt=""></a>
+            <a href="#" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/yt.png') }}" width="30px" alt=""></a>
             <!-- Twitter -->
-            <a type="button" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/twitter.png') }}" width="30px" alt=""></a>
+            <a href="#" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/twitter.png') }}" width="30px" alt=""></a>
           </div>
           <h5 class="text-uppercase mb-3">Donaciones</h5>
           <div>
