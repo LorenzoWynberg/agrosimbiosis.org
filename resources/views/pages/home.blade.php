@@ -17,7 +17,7 @@
             Cosechando Ciclos
           </h2>
           <p>
-            <a id="hero-cta" href="#" class="btn btn-primary text-white text-uppercase py-2 px-4">
+            <a id="hero-cta" href="#" class="btn btn-danger text-white text-uppercase py-2 px-4">
                 Conocenos
             </a>
           </p>
