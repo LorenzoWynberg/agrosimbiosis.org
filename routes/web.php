@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\StaticPagesController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,12 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-// Route::controller(StaticPagesController::class)->group(function () {
-//     Route::get('/', 'home')->name('home');
-//     Route::post('/equipo/andy', 'andy')->name('andy');
-// });
-
+//Static Pages
 Route::get('/', [StaticPagesController::class, 'home'])->name('home');
 Route::get('/equipo/andres-charpentier', [StaticPagesController::class, 'andy'])->name('andy');
 Route::get('/equipo/lorenzo-wynberg', [StaticPagesController::class, 'lore'])->name('lore');
 Route::get('/equipo/dasha-montcalm', [StaticPagesController::class, 'dasha'])->name('dasha');
+
+//Auth
+Route::any('/registro', [AuthController::class, 'register'])->name('register');
+Route::any('/login', [AuthController::class, 'login'])->name('login');
