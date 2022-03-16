@@ -64,9 +64,12 @@
                   <label for="password">Contraseña</label>
                 </div>
 
+                <!-- Submit -->
                 <div class="text-end text-lg-start">
                   @csrf
-                  <button type="submit" class="btn btn-secondary btn-lg text-white"><span class="fa fa-check me-2"></span>Continuar</button>
+                  <button type="submit" class="btn btn-secondary btn-lg text-white">
+                    <span class="fa fa-check me-2"></span>Continuar
+                  </button>
                 </div>
 
               </form>
