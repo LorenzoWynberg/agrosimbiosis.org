@@ -33,7 +33,7 @@
 
             <!-- Spacer -->
             <div class="col-12 d-lg-none">
-              <hr class="text-muted mt-0 mb-4">
+              <hr class="spacer mt-0 mb-4">
             </div>
 
             <!-- Form -->
@@ -65,7 +65,7 @@
                 </div>
 
                 <!-- Submit -->
-                <div class="text-end text-lg-start">
+                <div class="text-end">
                   @csrf
                   <button type="submit" class="btn btn-secondary btn-lg text-white">
                     <span class="fa fa-check me-2"></span>Continuar
