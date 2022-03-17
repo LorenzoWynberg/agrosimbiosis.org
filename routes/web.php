@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Http\Controllers\StaticPagesController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+//Static Pages
+Route::get('/', [StaticPagesController::class, 'home'])->name('home');
+Route::get('/equipo/andres-charpentier', [StaticPagesController::class, 'andy'])->name('andy');
+Route::get('/equipo/lorenzo-wynberg', [StaticPagesController::class, 'lore'])->name('lore');
+Route::get('/equipo/dasha-montcalm', [StaticPagesController::class, 'dasha'])->name('dasha');
+
+//Auth
+Route::get('/registro', [AuthController::class, 'register'])->name('register')->middleware('guest');
+Route::post('/registro', [AuthController::class, 'registerPost']);
+
+Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
+Route::post('/login', [AuthController::class, 'loginPost']);
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
