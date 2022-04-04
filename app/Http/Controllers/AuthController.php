@@ -58,10 +58,10 @@ class AuthController extends Controller
         return Socialite::driver($provider)->redirect();
     }
 
-    public function socialCallback($provider)
+    public function socialCallback($social)
     {
-        $userSocialite = Socialite::driver($provider)->user();
-        $socialProvider = SocialProvider::where('external_id', $userSocial->id)->where('external_auth', $provider)->first();
+        $userSocial = Socialite::driver($social)->user();
+        $socialProvider = SocialProvider::where('external_id', $userSocial->id)->where('external_auth', $social)->first();
         $userExists = false;
         $userNeedsProvider = false;
 
@@ -89,7 +89,7 @@ class AuthController extends Controller
                 [
                     'user_id' => $userExists->id,
                     'external_id' => $userSocial->id,
-                    'external_auth' => $provider,
+                    'external_auth' => $social,
                 ]
             );
         }
