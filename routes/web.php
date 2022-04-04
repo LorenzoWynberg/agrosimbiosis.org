@@ -31,3 +31,7 @@ Route::get('/login', [AuthController::class, 'login'])->name('login')->middlewar
 Route::post('/login', [AuthController::class, 'loginPost']);
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+
+//Auth Google
+Route::get('/auth/google/redirect', [AuthController::class, 'googleRedirect'])->name('google-redirect');
+Route::get('/auth/google/callback', [AuthController::class, 'googleCallback'])->name('google-callback');

@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\Request;
+use App\Models\SocialProvider;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\RegisterRequest;
-use Illuminate\Http\Request;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
@@ -40,12 +42,6 @@ class AuthController extends Controller
         return redirect()->route('home');
     }
 
-    /**
-     * Log the user out of the application.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function logout(Request $request)
     {
         Auth::logout();
@@ -54,6 +50,52 @@ class AuthController extends Controller
      
         $request->session()->regenerateToken();
      
+        return redirect()->route('home');
+    }
+
+    public function googleRedirect()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function googleCallback()
+    {
+        $userSocial = Socialite::driver('google')->user();
+        $socialProvider = SocialProvider::where('external_id', $userSocial->id)->where('external_auth', 'google')->first();
+        $userExists = false;
+        $userNeedsProvider = false;
+
+        if($socialProvider)
+            $userExists = $socialProvider->user();
+
+        if(!$userExists){
+            $userNeedsProvider = true;
+            $userExists = User::where('email', $userSocial->email)->first();
+        }
+
+        if(!$userExists){
+            $userExists = User::create(
+                [
+                    'name' => $userSocial->name,
+                    'username' => $userSocial->name,
+                    'email' => $userSocial->email, 
+                    'avatar' => $userSocial->avatar,
+                ]
+            );
+        }
+
+        if($userNeedsProvider){
+            SocialProvider::create(
+                [
+                    'user_id' => $userExists->id,
+                    'external_id' => $userSocial->id,
+                    'external_auth' => 'google',
+                ]
+            );
+        }
+
+        Auth::login($userExists);
+
         return redirect()->route('home');
     }
 }
