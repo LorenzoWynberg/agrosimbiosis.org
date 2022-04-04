@@ -53,15 +53,15 @@ class AuthController extends Controller
         return redirect()->route('home');
     }
 
-    public function googleRedirect()
+    public function socialRedirect($provider)
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver($provider)->redirect();
     }
 
-    public function googleCallback()
+    public function socialCallback($provider)
     {
-        $userSocial = Socialite::driver('google')->user();
-        $socialProvider = SocialProvider::where('external_id', $userSocial->id)->where('external_auth', 'google')->first();
+        $userSocialite = Socialite::driver($provider)->user();
+        $socialProvider = SocialProvider::where('external_id', $userSocial->id)->where('external_auth', $provider)->first();
         $userExists = false;
         $userNeedsProvider = false;
 
@@ -89,7 +89,7 @@ class AuthController extends Controller
                 [
                     'user_id' => $userExists->id,
                     'external_id' => $userSocial->id,
-                    'external_auth' => 'google',
+                    'external_auth' => $provider,
                 ]
             );
         }

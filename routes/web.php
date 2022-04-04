@@ -33,5 +33,5 @@ Route::post('/login', [AuthController::class, 'loginPost']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
 //Auth Google
-Route::get('/auth/google/redirect', [AuthController::class, 'googleRedirect'])->name('google-redirect');
-Route::get('/auth/google/callback', [AuthController::class, 'googleCallback'])->name('google-callback');
+Route::get('/auth/{provider}/redirect', [AuthController::class, 'socialRedirect'])->name('social-redirect');
+Route::get('/auth/{provider}/callback', [AuthController::class, 'socialCallback'])->name('social-callback');
