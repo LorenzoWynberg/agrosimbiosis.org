@@ -60,13 +60,14 @@ class AuthController extends Controller
 
     public function socialCallback($social)
     {
-        $userSocial = Socialite::driver($social)->user();
+        $userSocial = Socialite::driver($social)->stateless()->user();
         $socialProvider = SocialProvider::where('external_id', $userSocial->id)->where('external_auth', $social)->first();
         $userExists = false;
         $userNeedsProvider = false;
 
-        if($socialProvider)
-            $userExists = $socialProvider->user();
+        if($socialProvider){
+            $userExists = $socialProvider->user()->first();
+        }
 
         if(!$userExists){
             $userNeedsProvider = true;
