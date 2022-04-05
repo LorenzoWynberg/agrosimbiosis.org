@@ -53,9 +53,9 @@ class AuthController extends Controller
         return redirect()->route('home');
     }
 
-    public function socialRedirect($provider)
+    public function socialRedirect($social)
     {
-        return Socialite::driver($provider)->redirect();
+        return Socialite::driver($social)->redirect();
     }
 
     public function socialCallback($social)
