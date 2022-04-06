@@ -24,11 +24,9 @@
             <div class="col-12 col-lg-5 order-lg-3">
 
               <!-- Facebook -->
-              <a href="#" class="btn btn-info btn-lg h5 text-white d-block mb-3"><span class="fa fa-facebook me-2"></span> Facebook</a>
+              <a href="{{ route('social-redirect', 'facebook') }}" class="btn btn-info btn-lg h5 text-white d-block mb-3"><span class="fa fa-facebook me-2"></span> Facebook</a>
               <!-- Google -->
-              <a href="#" class="btn btn-danger text-white btn-lg d-block mb-3"><span class="fa fa-google me-2"></span> Google</a>
-              <!-- Twitter -->
-              <a href="#" class="btn btn-info btn-lg text-white d-block mb-3"><span class="fa fa-twitter me-2"></span> Twitter</a>
+              <a href="{{ route('social-redirect', 'google') }}" class="btn btn-danger text-white btn-lg d-block mb-3"><span class="fa fa-google me-2"></span> Google</a>
 
             </div>
 

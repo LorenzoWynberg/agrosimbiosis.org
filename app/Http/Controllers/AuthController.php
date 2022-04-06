@@ -37,7 +37,7 @@ class AuthController extends Controller
 
     public function registerPost(RegisterRequest $request)
     {
-        $user = User::create(request(['name', 'email', 'password', 'username']));
+        $user = User::create($request->except('_token'));
         Auth::login($user);
         return redirect()->route('home');
     }
@@ -45,11 +45,8 @@ class AuthController extends Controller
     public function logout(Request $request)
     {
         Auth::logout();
-     
         $request->session()->invalidate();
-     
         $request->session()->regenerateToken();
-     
         return redirect()->route('home');
     }
 
@@ -96,7 +93,6 @@ class AuthController extends Controller
         }
 
         Auth::login($userExists);
-
         return redirect()->route('home');
     }
 }
