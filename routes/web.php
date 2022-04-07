@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Http\Controllers\CatalogueController;
 use App\Http\Controllers\StaticPagesController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
@@ -35,3 +36,6 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middle
 //Auth Google
 Route::get('/auth/{social}/redirect', [AuthController::class, 'socialRedirect'])->name('social-redirect');
 Route::get('/auth/{social}/callback', [AuthController::class, 'socialCallback'])->name('social-callback');
+
+//Catalogue
+Route::get('/catalogo', [CatalogueController::class, 'index'])->name('catalogue.index');

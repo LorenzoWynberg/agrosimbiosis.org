@@ -6,17 +6,20 @@
     </button>
     <div class="collapse navbar-collapse" id="nav-links">
       <ul class="navbar-nav me-auto">
+        {{--<li class="nav-item">
+          <a class="nav-link{{ isset($active) && $active == 'home' ? ' active' : '' }}" aria-current="page" href="{{ route('home') }}">Inicio</a>
+        </li> --}}
         <li class="nav-item">
-          <a class="nav-link{{ isset($active) && $active == 'home' ? ' active' : ''}}" aria-current="page" href="{{ route('home') }}">Inicio</a>
+          <a class="nav-link{{ isset($active) && $active == 'team' ? ' active' : '' }}" href="{{ route('home') . '/#team' }}">Equipo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ isset($active) && $active == 'team' ? ' active' : ''}}" href="{{route('home') . '/#team' }}">Equipo</a>
+          <a class="nav-link{{ isset($active) && $active == 'catalogue' ? ' active' : '' }}" href="{{ route('catalogue.index') }}">Catálogo</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ isset($active) && $active == 'contact' ? ' active' : ''}}" href="#">Contacto</a>
+          <a class="nav-link{{ isset($active) && $active == 'contact' ? ' active' : '' }}" href="#">Contacto</a>
         </li>
         @if(Auth::check())
           <li class="nav-item d-lg-none">
@@ -26,10 +29,10 @@
           </li>
         @else
           <li class="nav-item d-lg-none">
-            <a class="nav-link{{ isset($active) && $active == 'login' ? ' active' : ''}}" href="{{ route('login') }}">Inicia Sesión</a>
+            <a class="nav-link{{ isset($active) && $active == 'login' ? ' active' : '' }}" href="{{ route('login') }}">Inicia Sesión</a>
           </li>
           <li class="nav-item d-lg-none">
-            <a class="nav-link{{ isset($active) && $active == 'register' ? ' active' : ''}}" href="{{ route('register') }}">Regístrate</a>
+            <a class="nav-link{{ isset($active) && $active == 'register' ? ' active' : '' }}" href="{{ route('register') }}">Regístrate</a>
           </li>
         @endif
       </ul>
