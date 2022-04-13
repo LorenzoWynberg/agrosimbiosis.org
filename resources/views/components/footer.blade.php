@@ -84,7 +84,7 @@
   <div class="copyright">
     <div class="text-center p-3 bg-info text-white">
       &copy; {{ date("Y") }} Derechos De Autor:
-      <a class="text-white" href="{{ route('home') }}">AgroSimbiosis.org</a>
+      <a class="text-white" href="{{ route(Lang::get('routes.name.home')) }}">AgroSimbiosis.org</a>
     </div>
   </div>
   <!-- Footer - Copyright - End -->

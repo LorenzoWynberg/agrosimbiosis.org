@@ -17,7 +17,7 @@
             Cosechando Ciclos
           </h2>
           <p>
-            <a id="hero-cta" href="#" class="btn btn-danger text-white text-uppercase py-2 px-4">
+            <a id="hero-cta" href="#hero-cta" class="btn btn-danger text-white text-uppercase py-2 px-4">
                 Conocenos
             </a>
           </p>
@@ -90,7 +90,7 @@
     <h2 class="text-center py-3">Nuestro Equipo</h2>
     <div class="row">
 
-      <a href="{{ route('dasha') }}" class="team-member col-md-4 my-5 text-body">
+      <a href="{{ route(Lang::get('routes.name.team.dasha')) }}" class="team-member col-md-4 my-5 text-body">
         <div class="row d-flex align-items-center">
           <div class="col-4 offset-1 offset-md-0 col-md-12 d-flex align-items-center">
             <img src="{{ asset('imgs/team/dasha.jpg') }}" class="img-fluid rounded-circle" alt="">
@@ -104,7 +104,7 @@
 
       <hr class="my-0 d-md-none">
       
-      <a href="{{ route('andy') }}" class="team-member col-md-4 my-5 text-body">
+      <a href="{{ route(Lang::get('routes.name.team.andy')) }}" class="team-member col-md-4 my-5 text-body">
         <div class="row d-flex align-items-center">
           <div class="col-4 col-md-12 order-2 order-md-1 d-flex align-items-center">
             <img src="{{ asset('imgs/team/andy.jpg') }}" class="img-fluid rounded-circle" alt="">
@@ -118,7 +118,7 @@
 
       <hr class="my-0 d-md-none">
       
-      <a href="{{ route('lore') }}" class="team-member col-md-4 my-5 text-body">
+      <a href="{{ route(Lang::get('routes.name.team.lore')) }}" class="team-member col-md-4 my-5 text-body">
         <div class="row d-flex align-items-center">
           <div class="col-4 offset-1 offset-md-0 col-md-12 d-flex align-items-center">
             <img src="{{ asset('imgs/team/lore.jpg') }}" class="img-fluid rounded-circle" alt="">

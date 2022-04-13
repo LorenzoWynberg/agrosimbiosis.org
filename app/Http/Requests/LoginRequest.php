@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Support\Facades\Lang;
 use Illuminate\Foundation\Http\FormRequest;
 
 class LoginRequest extends FormRequest
@@ -40,7 +41,7 @@ class LoginRequest extends FormRequest
             //Email
             'email.required'        => 'Por favor escribir su correo',
             'email.email'           => 'Formato incorrecto',
-            'email.exists'          => 'Correo no existe, desea <a href="' . route('register') . '">registrarse?</a>',
+            'email.exists'          => 'Correo no existe, desea <a href="' . route(Lang::get('routes.name.register')) . '">registrarse?</a>',
 
             //Password
             'password.required'     => 'Por favor escribir contraseña',

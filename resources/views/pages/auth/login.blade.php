@@ -37,7 +37,7 @@
 
             <!-- Form -->
             <div class="col-12 col-lg-7 py-lg-3 order-lg-1">
-              <form action="{{ route('login') }}" method="post">
+              <form action="{{ route(Lang::get('routes.name.login')) }}" method="post">
 
                 <!-- Email -->
                 <div class="form-floating mb-3">

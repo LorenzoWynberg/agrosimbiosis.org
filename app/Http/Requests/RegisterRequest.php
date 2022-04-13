@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Support\Facades\Lang;
 use Illuminate\Foundation\Http\FormRequest;
 
 class RegisterRequest extends FormRequest
@@ -50,7 +51,7 @@ class RegisterRequest extends FormRequest
 
             //Email
             'email.required'    => 'Por favor escribir su correo',
-            'email.unique'      => 'Correo ya existe, por favor escoger otro o intente <a href="' . route('login') . '">iniciar sesion</a>',
+            'email.unique'      => 'Correo ya existe, por favor escoger otro o intente <a href="' . route(Lang::get('routes.name.login')) . '">iniciar sesion</a>',
             'email.email'       => 'Formato incorrecto',
 
             //Password

@@ -17,25 +17,60 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+|
+| Set up locale if first segment
+| of route matches one of our languages
+*/
+if(in_array(Request::segment(1), config('langs'))){
+	app()->setLocale(Request::segment(1));
+}
 
-//Static Pages
-Route::get('/', [StaticPagesController::class, 'home'])->name('home');
-Route::get('/equipo/andres-charpentier', [StaticPagesController::class, 'andy'])->name('andy');
-Route::get('/equipo/lorenzo-wynberg', [StaticPagesController::class, 'lore'])->name('lore');
-Route::get('/equipo/dasha-montcalm', [StaticPagesController::class, 'dasha'])->name('dasha');
+/*
+|
+| If no locale is set we set to default
+*/
+Route::get('/', function()
+{
+    return redirect(app()->getLocale());
+});
 
-//Auth
-Route::get('/registro', [AuthController::class, 'register'])->name('register')->middleware('guest');
-Route::post('/registro', [AuthController::class, 'registerPost']);
+/*
+|
+| Loop through available languages
+| and create lang routes
+*/
+foreach (config('langs') as $lang)
+{
+	Route::group(['prefix' => $lang], function() use ($lang)
+	{
+		// Home
+		Route::get('/', [StaticPagesController::class, 'home'])->name($lang . '.home');
 
-Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
-Route::post('/login', [AuthController::class, 'loginPost']);
+		// Team
+		Route::get(__('routes.url.team.andy', [], $lang), [StaticPagesController::class, 'andy'])->name($lang.'.team.andy');
+		Route::get(__('routes.url.team.lore', [], $lang), [StaticPagesController::class, 'lore'])->name($lang.'.team.lore');
+		Route::get(__('routes.url.team.dasha', [], $lang), [StaticPagesController::class, 'dasha'])->name($lang.'.team.dasha');
 
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+		// Catalogue
+		Route::get(__('routes.url.catalogue', [], $lang), [CatalogueController::class, 'index'])->name($lang.'.catalogue');
 
-//Auth Google
+		// Register
+		Route::get(__('routes.url.register', [], $lang), [AuthController::class, 'register'])->name($lang.'.register')->middleware('guest');
+		Route::post(__('routes.url.register', [], $lang), [AuthController::class, 'registerPost']);
+
+		// Login
+		Route::get(__('routes.url.login', [], $lang), [AuthController::class, 'login'])->name($lang.'.login')->middleware('guest');
+		Route::post(__('routes.url.login', [], $lang), [AuthController::class, 'loginPost']);
+
+		// Logout
+		Route::get(__('routes.url.logout', [], $lang), [AuthController::class, 'logout'])->name($lang.'.logout')->middleware('auth');
+	});
+}
+
+/*
+|
+| Social Auth
+*/
 Route::get('/auth/{social}/redirect', [AuthController::class, 'socialRedirect'])->name('social-redirect');
 Route::get('/auth/{social}/callback', [AuthController::class, 'socialCallback'])->name('social-callback');
-
-//Catalogue
-Route::get('/catalogo', [CatalogueController::class, 'index'])->name('catalogue.index');

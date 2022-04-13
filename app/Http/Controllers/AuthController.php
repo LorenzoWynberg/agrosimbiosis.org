@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\SocialProvider;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Lang;
 use App\Http\Requests\RegisterRequest;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -26,20 +27,20 @@ class AuthController extends Controller
     {
         if (Auth::attempt($request->except('_token'))) {
             $request->session()->regenerate();
-            return redirect()->route('home');
+            return redirect()->route(Lang::get('routes.name.home'));
         }
  
         return back()->withErrors([
-            'email' => 'Correo no encontrado, desea <a href="' . route('register') . '">crear una cuenta?</a>',
+            'email' => 'Correo no encontrado, desea <a href="' . route(Lang::get('routes.name.register')) . '">crear una cuenta?</a>',
             'password' => 'Contraseña incorrecta',
-        ]);
+        ])->withInput();
     }
 
     public function registerPost(RegisterRequest $request)
     {
         $user = User::create($request->except('_token'));
         Auth::login($user);
-        return redirect()->route('home');
+        return redirect()->route(Lang::get('routes.name.home'));
     }
 
     public function logout(Request $request)
@@ -47,7 +48,7 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('home');
+        return redirect()->route(Lang::get('routes.name.home'));
     }
 
     public function socialRedirect($social)
@@ -93,6 +94,6 @@ class AuthController extends Controller
         }
 
         Auth::login($userExists);
-        return redirect()->route('home');
+        return redirect()->route(Lang::get('routes.name.home'));
     }
 }
