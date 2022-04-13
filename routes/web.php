@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 | Set up locale if first segment
 | of route matches one of our languages
 */
-if(in_array(Request::segment(1), config('langs'))) {
+if (in_array(Request::segment(1), config('langs'))) {
 	app()->setLocale(Request::segment(1));
 }
 

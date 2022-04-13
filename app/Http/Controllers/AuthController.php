@@ -63,16 +63,16 @@ class AuthController extends Controller
         $userExists = false;
         $userNeedsProvider = false;
 
-        if($socialProvider) {
+        if ($socialProvider) {
             $userExists = $socialProvider->user()->first();
         }
 
-        if(!$userExists) {
+        if (!$userExists) {
             $userNeedsProvider = true;
             $userExists = User::where('email', $userSocial->email)->first();
         }
 
-        if(!$userExists) {
+        if (!$userExists) {
             $userExists = User::create(
                 [
                     'name' => $userSocial->name,
@@ -83,7 +83,7 @@ class AuthController extends Controller
             );
         }
 
-        if($userNeedsProvider) {
+        if ($userNeedsProvider) {
             SocialProvider::create(
                 [
                     'user_id' => $userExists->id,
