@@ -7,20 +7,28 @@
     <div class="collapse navbar-collapse" id="nav-links">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link{{ isset($active) && $active == 'team' ? ' active' : '' }}" href="{{ route(Lang::get('routes.name.home')) . '/#team' }}">Equipo</a>
+          <a class="nav-link{{ isset($active) && $active == 'team' ? ' active' : '' }}" href="{{ route(Lang::get('routes.name.home')) . '/#team' }}">
+            {{ Lang::get('common.team') }}
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ isset($active) && $active == 'catalogue' ? ' active' : '' }}" href="{{ route(Lang::get('routes.name.catalogue')) }}">Catálogo</a>
+          <a class="nav-link{{ isset($active) && $active == 'catalogue' ? ' active' : '' }}" href="{{ route(Lang::get('routes.name.catalogue')) }}">
+            {{ Lang::get('common.catalogue') }}
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" href="#">
+            {{ Lang::get('common.blog') }}
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ isset($active) && $active == 'contact' ? ' active' : '' }}" href="#">Contacto</a>
+          <a class="nav-link{{ isset($active) && $active == 'contact' ? ' active' : '' }}" href="#">
+            {{ Lang::get('common.contact') }}
+          </a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="langDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Lang
+            {{ Lang::get('common.lang') }}
           </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="langDropDown">
             @if(isset($translatedRouteParams))
@@ -41,22 +49,28 @@
         @auth
           <li class="nav-item d-lg-none">
             <form action="/logout" method="post">
-              <a class="nav-link" href="{{ route(Lang::get('routes.name.logout')) }}">Cerrar Sesión</a>
+              <a class="nav-link" href="{{ route(Lang::get('routes.name.logout')) }}">
+                {{ Lang::get('common.logout') }}
+              </a>
             </form>
           </li>
         @endauth
         @guest
           <li class="nav-item d-lg-none">
-            <a class="nav-link{{ isset($active) && $active == 'login' ? ' active' : '' }}" href="{{ route(Lang::get('routes.name.login')) }}">Inicia Sesión</a>
+            <a class="nav-link{{ isset($active) && $active == 'login' ? ' active' : '' }}" href="{{ route(Lang::get('routes.name.login')) }}">
+              {{ Lang::get('common.login') }}
+            </a>
           </li>
           <li class="nav-item d-lg-none">
-            <a class="nav-link{{ isset($active) && $active == 'register' ? ' active' : '' }}" href="{{ route(Lang::get('routes.name.register')) }}">Regístrate</a>
+            <a class="nav-link{{ isset($active) && $active == 'register' ? ' active' : '' }}" href="{{ route(Lang::get('routes.name.register')) }}">
+              {{ Lang::get('common.register') }}
+            </a>
           </li>
         @endguest
       </ul>
       <div class="d-none d-flex d-lg-flex">
         <form action="" class="me-2">
-          <input class="form-control outline-info" type="search" placeholder="Busqueda" aria-label="Search">
+          <input class="form-control outline-info" type="search" placeholder="{{ Lang::get('common.search') }}" aria-label="Search">
         </form>
         @auth
           <a href="{{ route(Lang::get('routes.name.logout')) }}" class="btn rounded-circle btn-danger text-white"><i class="fa-solid fa-right-from-bracket"></i></a>
@@ -67,9 +81,17 @@
               <i class="fa-solid fa-right-to-bracket"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-end py-1" aria-labelledby="dropdown-auth">
-              <li><a href="{{ route(Lang::get('routes.name.login')) }}" class="dropdown-item" href="#">Inicia sesión</a></li>
+              <li>
+                <a href="{{ route(Lang::get('routes.name.login')) }}" class="dropdown-item" href="#">
+                  {{ Lang::get('common.login') }}
+                </a>
+              </li>
               <hr class="m-0">
-              <li><a href="{{ route(Lang::get('routes.name.register')) }}" class="dropdown-item" href="#">Regístrate!</a></li>
+              <li>
+                <a href="{{ route(Lang::get('routes.name.register')) }}" class="dropdown-item" href="#">
+                  {{ Lang::get('common.register') }}
+                </a>
+              </li>
             </ul>
           </div>
         @endguest
