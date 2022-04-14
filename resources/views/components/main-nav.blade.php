@@ -27,10 +27,10 @@
           </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="langDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown-lang" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ Lang::get('common.lang') }}
           </a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="langDropDown">
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdown-lang">
             @if(isset($translatedRouteParams))
               @foreach($translatedRouteParams as $lang => $params)
                 <li>
@@ -73,7 +73,9 @@
           <input class="form-control outline-info" type="search" placeholder="{{ Lang::get('common.search') }}" aria-label="Search">
         </form>
         @auth
-          <a href="{{ route(Lang::get('routes.name.logout')) }}" class="btn rounded-circle btn-danger text-white"><i class="fa-solid fa-right-from-bracket"></i></a>
+          <a href="{{ route(Lang::get('routes.name.logout')) }}" class="btn rounded-circle btn-danger text-white">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </a>
         @endauth
         @guest
           <div class="dropdown">
