@@ -17,4 +17,28 @@ return [
     'team' => 'Equipo',
     'lang' => 'Idioma',
     'search' => 'Busqueda',
+    'socials' => 'Redes Sociales',
+    'donations' => 'Donaciones',
+    'copyright' => 'Derechos De Autor',
+    'open' => 'Abierto',
+    'closed' => 'Cerrado',
+    'schedule' => 'Horario',
+
+    //Day Abbeviations
+    'mon' => 'Lun',
+    'tues' => 'Mar',
+    'wed' => 'Mier',
+    'thurs' => 'Jue',
+    'fri' => 'Vie',
+    'sat' => 'Sab',
+    'sun' => 'Dom',
+
+    //Days
+    'monday' => 'Lunes',
+    'tuesday' => 'Martes',
+    'wednesday' => 'Miercoles',
+    'thursday' => 'Jueves',
+    'friday' => 'Viernes',
+    'saturday' => 'Sabado',
+    'sunday' => 'Domingo',
 ];
