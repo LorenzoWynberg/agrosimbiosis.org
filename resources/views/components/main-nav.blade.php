@@ -1,6 +1,6 @@
 <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container-fluid ">
-    <a class="navbar-brand" href="{{ route(Lang::get('routes.name.home')) }}">Agrosimbiosis</a>
+    <a class="navbar-brand" href="{{ route(Lang::get('routes.name.home')) }}">{{ Lang::get('common.brand.short') }}</a>
     <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#nav-links" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-icon fa fa-bars"></span>
     </button>
