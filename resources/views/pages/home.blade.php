@@ -59,7 +59,7 @@
   <div class="container py-5">
     <div class="row my-3">
       <div class="col-md-8 offset-md-2 col-xl-6 offset-xl-3">
-        <h2>{!! Lang::get('pages/home.about.title') !!}</h2>
+        <h2 class="mb-3">{!! Lang::get('pages/home.about.title') !!}</h2>
         {!! Lang::get('pages/home.about.content') !!}
       </div>
     </div>
@@ -72,7 +72,7 @@
   <div class="container py-5">
     <div class="row my-3">
       <div class="col-md-8 offset-md-2 col-xl-6 offset-xl-3">
-        <h2>{!! Lang::get('pages/home.mision.title') !!}</h2>
+        <h2 class="mb-3">{!! Lang::get('pages/home.mision.title') !!}</h2>
         {!! Lang::get('pages/home.mision.content') !!}
       </div>
     </div>
