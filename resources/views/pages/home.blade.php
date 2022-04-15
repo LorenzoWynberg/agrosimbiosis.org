@@ -12,7 +12,7 @@
     <div class="container-fluid">
       <div class="row align-items-end pt-5 pb-5">
         <div class="col-12 col-sm-10 col-md-9 pb-5 pb-sm-0 mx-auto text-center">
-          <h1 class="text-white display-2">{!! Lang::get('common.brand.long') !!}</h1>
+          <h1 class="text-white display-2">{!! Lang::get('common.brand') !!}</h1>
           <h2 class="text-white fw-light">
             {!! Lang::get('pages/home.hero.headline') !!}
           </h2>
