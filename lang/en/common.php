@@ -8,6 +8,10 @@ return [
     |--------------------------------------------------------------------------
     */
 
+    'brand' => [
+        'short' => 'Agrosymbiosis',
+        'long' => 'Agro Symbiosis',
+    ],
     'contact' => 'Contact',
     'login' => 'Login',
     'logout' => 'Logout',
