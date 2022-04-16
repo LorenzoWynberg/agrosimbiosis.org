@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Regístrate')
+@section('title', Lang::get('common.register'))
 @section('id', 'register')
 
 @section('content')
@@ -13,7 +13,7 @@
         <div class="card-body">
           
           <!-- Title -->
-          <h2 class="text-center text-info mt-2 mb-3">Regístrate</h2>
+          <h2 class="text-center text-info mt-2 mb-3">{{ Lang::get('common.register') }}</h2>
 
           <!-- Spacer -->
           <hr class="text-muted mt-0 mb-4">
@@ -46,10 +46,10 @@
                     type="text" 
                     id="name" 
                     name="name" 
-                    placeholder="Nombre" 
+                    placeholder="{{ Lang::get('common.name') }}" 
                     class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" 
                     value="{{ isset($errors) && $errors->count() ? old('name') : '' }}">
-                  <label for="name">Nombre</label>
+                  <label for="name">{{ Lang::get('common.name') }}</label>
                   <div class="invalid-feedback">{{ $errors->first('name') ?? '' }}</div>
 
                 </div>
@@ -62,10 +62,10 @@
                   type="text" 
                   id="username" 
                   name="username" 
-                  placeholder="Nombre de usuario" 
+                  placeholder="{{ Lang::get('common.username') }}" 
                   class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}"
                   value="{{ isset($errors) && $errors->count() ? old('username') : '' }}">
-                  <label for="email">Nombre de usuario</label>
+                  <label for="email">{{ Lang::get('common.username') }}</label>
                   <div class="invalid-feedback">{{ $errors->first('username') ?? '' }}</div>
 
                 </div>
@@ -78,10 +78,10 @@
                   type="email" 
                   id="email" 
                   name="email" 
-                  placeholder="Correo" 
+                  placeholder="{{ Lang::get('common.email') }}" 
                   class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" 
                   value="{{ isset($errors) && $errors->count() ? old('email') : '' }}">
-                  <label for="email">Correo</label>
+                  <label for="email">{{ Lang::get('common.email') }}</label>
                   <div class="invalid-feedback">{!! $errors->first('email') ?? '' !!}</div>
 
                 </div>
@@ -94,9 +94,9 @@
                   type="password" 
                   id="password" 
                   name="password" 
-                  placeholder="Contraseña" 
+                  placeholder="{{ Lang::get('common.password') }}" 
                   class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
-                  <label for="password">Contraseña</label>
+                  <label for="password">{{ Lang::get('common.password') }}</label>
                   <div class="invalid-feedback">{{ $errors->first('password') ?? '' }}</div>
 
                 </div>
@@ -106,7 +106,7 @@
                 <div class="text-end">
                   @csrf
                   <button type="submit" class="btn btn-secondary btn-lg text-white">
-                    <span class="fa fa-check me-2"></span>Continuar
+                    <span class="fa fa-check me-2"></span>{{ Lang::get('common.continue') }}
                   </button>
                 </div>
                 <!-- Submit - END -->

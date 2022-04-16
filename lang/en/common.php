@@ -24,6 +24,11 @@ return [
     'open' => 'Open',
     'closed' => 'Closed',
     'schedule' => 'Schedule',
+    'name' => 'Name',
+    'username' => 'User Name',
+    'email' => 'Email',
+    'password' => 'Password',
+    'continue' => 'Continue',
 
 
     //Day Abbeviations

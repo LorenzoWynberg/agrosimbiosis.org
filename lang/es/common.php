@@ -12,7 +12,7 @@ return [
     'contact' => 'Contacto',
     'login' => 'Inicia Sesión',
     'logout' => 'Cerrar Sesión',
-    'register' => 'Regístrate!',
+    'register' => 'Regístrate',
     'catalogue' => 'Catalogo',
     'blog' => 'Blog',
     'team' => 'Equipo',
@@ -24,6 +24,11 @@ return [
     'open' => 'Abierto',
     'closed' => 'Cerrado',
     'schedule' => 'Horario',
+    'name' => 'Nombre',
+    'username' => 'Nombre de Usuario',
+    'email' => 'Correo',
+    'password' => 'Contraseña',
+    'continue' => 'Continuar',
 
     //Day Abbreviations
     'mon' => 'Lun',

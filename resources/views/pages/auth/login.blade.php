@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Inicia Sesion')
+@section('title', Lang::get('common.login'))
 @section('id', 'login')
 
 @section('content')
@@ -13,7 +13,7 @@
         <div class="card-body">
           
           <!-- Title -->
-          <h2 class="text-center text-info mt-2 mb-3">Inicia Sesión</h2>
+          <h2 class="text-center text-info mt-2 mb-3">{{ Lang::get('common.login') }}</h2>
 
           <!-- Spacer -->
           <hr class="text-muted mt-0 mb-4">
@@ -46,10 +46,10 @@
                   type="email" 
                   id="email" 
                   name="email" 
-                  placeholder="Correo" 
+                  placeholder="{{ Lang::get('common.email') }}" 
                   class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" 
                   value="{{ isset($errors) && $errors->count() ? old('email') : '' }}">
-                  <label for="email">Correo</label>
+                  <label for="email">{{ Lang::get('common.email') }}</label>
                   <div class="invalid-feedback">{!! $errors->first('email') ?? '' !!}</div>
 
                 </div>
@@ -62,9 +62,9 @@
                   type="password" 
                   id="password" 
                   name="password" 
-                  placeholder="Contraseña" 
+                  placeholder="{{ Lang::get('common.password') }}" 
                   class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
-                  <label for="password">Contraseña</label>
+                  <label for="password">{{ Lang::get('common.password') }}</label>
                   <div class="invalid-feedback">{!! $errors->first('password') ?? '' !!}</div>
 
                 </div>
@@ -74,7 +74,7 @@
                 <div class="text-end">
                 	@csrf
                   <button type="submit" class="btn btn-secondary btn-lg text-white">
-                  	<span class="fa fa-check me-2"></span>Continuar
+                  	<span class="fa fa-check me-2"></span>{{ Lang::get('common.continue') }}
                   </button>
                 <!-- Submit - END -->  
 
