@@ -17,7 +17,7 @@ return [
     'blog' => 'Blog',
     'team' => 'Equipo',
     'lang' => 'Idioma',
-    'search' => 'Busqueda',
+    'search' => 'Búsqueda',
     'socials' => 'Redes Sociales',
     'donations' => 'Donaciones',
     'copyright' => 'Derechos De Autor',
@@ -25,7 +25,7 @@ return [
     'closed' => 'Cerrado',
     'schedule' => 'Horario',
 
-    //Day Abbeviations
+    //Day Abbreviations
     'mon' => 'Lun',
     'tues' => 'Mar',
     'wed' => 'Mier',
