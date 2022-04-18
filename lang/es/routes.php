@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Route Language Lines
+    | Route Language Lines ES
     |--------------------------------------------------------------------------
     |
     | The following language lines are used for routing,

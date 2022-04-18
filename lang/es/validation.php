@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Validation Language Lines
+| Validation Language Lines ES
 |--------------------------------------------------------------------------
 |
 | The following language lines contain the default error messages used by
