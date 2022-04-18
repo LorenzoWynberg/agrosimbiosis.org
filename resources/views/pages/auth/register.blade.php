@@ -53,7 +53,7 @@
                     value="{{ isset($errors) && $errors->count() ? old('name') : '' }}">
                   <label for="name">{{ Lang::get('common.name') }}</label>
                   <div class="invalid-feedback">
-                    {!! $errors->first('name') ? ucfirst($errors->first('name')) : '' !!}
+                    {!! $errors->first('name') ?? '' !!}
                   </div>
 
                 </div>
@@ -71,7 +71,7 @@
                   value="{{ isset($errors) && $errors->count() ? old('username') : '' }}">
                   <label for="email">{{ Lang::get('common.username') }}</label>
                   <div class="invalid-feedback">
-                    {!! $errors->first('username') ? ucfirst($errors->first('username')) : '' !!}
+                    {!! $errors->first('username') ?? '' !!}
                   </div>
 
                 </div>
@@ -89,7 +89,7 @@
                   value="{{ isset($errors) && $errors->count() ? old('email') : '' }}">
                   <label for="email">{{ Lang::get('common.email') }}</label>
                   <div class="invalid-feedback">
-                    {!! $errors->first('email') ? ucfirst($errors->first('email')) : '' !!}
+                    {!! $errors->first('email') ?? '' !!}
                   </div>
 
                 </div>
@@ -106,7 +106,7 @@
                   class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
                   <label for="password">{{ Lang::get('common.password') }}</label>
                   <div class="invalid-feedback">
-                    {!! $errors->first('password') ? ucfirst($errors->first('password')) : '' !!}
+                    {!! $errors->first('password') ?? '' !!}
                   </div>
 
                 </div>

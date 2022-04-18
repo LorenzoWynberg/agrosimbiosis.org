@@ -52,7 +52,7 @@
                   value="{{ isset($errors) && $errors->count() ? old('email') : '' }}">
                   <label for="email">{{ Lang::get('common.email') }}</label>
                   <div class="invalid-feedback">
-                    {!! $errors->first('email') ? ucfirst($errors->first('email')) : '' !!}
+                    {!! $errors->first('email') ?? '' !!}
                   </div>
                 </div>
                 <!-- Email - END -->
@@ -67,8 +67,8 @@
                   class="form-control{{ $errors->has('password') || $errors->has('credentials') ? ' is-invalid' : '' }}">
                   <label for="password">{{ Lang::get('common.password') }}</label>
                   <div class="invalid-feedback">
-                    {!! $errors->first('password') ? ucfirst($errors->first('password')) : '' !!}
-                    {!! $errors->first('credentials') ? ucfirst($errors->first('credentials')) : '' !!}
+                    {!! $errors->first('password') ?? '' !!}
+                    {!! $errors->first('credentials') ?? '' !!}
                   </div>
                 </div>
                 <!-- Password - END -->
