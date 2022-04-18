@@ -12,20 +12,45 @@
 		&.active, &:hover
 			background-color: $success
 			transition: background-color .25s
+	#lang-dropdown
+		background-color: $secondary
+		margin-top: 0
+		border-top: 0
+		top: 48px
+		padding: 0
+		border-radius: 0
+		.nav-item 
+			.nav-link
+				border-radius: 0
+	
 
 @include media-breakpoint-up(lg)
 	#main-nav 
 		.nav-item
-			margin-left: $spacer
-			.nav-link 
+			.nav-link
+				margin-left: $spacer/2
 				border-radius: $border-radius
+			&:first-child .nav-link
+				margin-left: 0
+		#lang-dropdown
+			text-align: center
+			min-width: initial
+			border-radius: 0 0 $border-radius $border-radius
+			width: 74px
+			.nav-item:last-child .nav-link
+				border-radius: 0 0 $border-radius $border-radius
+			.nav-link
+				margin: 0
+
 
 @include media-breakpoint-down(lg)
 	#main-nav
 		.navbar-collapse
+			height: 201px
+			width: 180px
+			overflow: scroll
 			border-left: 1px solid $success
 			border-bottom: 1px solid $success
-			width: 220px
 			position: fixed
 			top: 56px
 			right: 0
@@ -39,3 +64,10 @@
 			.nav-link
 				padding-left: $spacer
 				padding-right: $spacer
+		#lang-dropdown
+			border: none
+			.nav-item
+				.nav-link
+					border-radius: 0
+					padding-left: $spacer * 2
+
