@@ -62,7 +62,9 @@
           <h5 class="text-uppercase mb-3 pb-1">{{ Lang::get('common.contact') }}</h5>
           <ul class="fa-ul mx-0">
             <li class="mb-3">
-              <span class="fa-li position-static"><i class="fas fa-phone"></i></span><span class="ms-2">+506 8329-3003</span>
+              <a href="tel:+506-8329-3003" class="text-white">
+                <span class="fa-li position-static"><i class="fas fa-phone"></i></span><span class="ms-2">+506 8329-3003</span>
+              </a>
             </li>
             <li class="mb-3">
               <a href="mailto: agrosimbiosis@gmail.com" class="text-white">
