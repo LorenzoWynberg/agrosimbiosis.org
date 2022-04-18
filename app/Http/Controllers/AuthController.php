@@ -29,10 +29,9 @@ class AuthController extends Controller
             $request->session()->regenerate();
             return redirect()->route(Lang::get('routes.name.home'));
         }
- 
+
         return back()->withErrors([
-            'email' => 'Correo no encontrado, desea <a href="' . route(Lang::get('routes.name.register')) . '">crear una cuenta?</a>',
-            'password' => 'Contraseña incorrecta',
+            'credentials' => Lang::get('validation.custom.credentials'),
         ])->withInput();
     }
 

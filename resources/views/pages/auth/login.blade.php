@@ -22,12 +22,14 @@
 
             <!-- Socials -->
             <div class="col-12 col-lg-5 order-lg-3">
-
               <!-- Facebook -->
-              <a href="{{ route('social-redirect', 'facebook') }}" class="btn btn-info btn-lg h5 text-white d-block mb-3"><span class="fa fa-facebook me-2"></span> Facebook</a>
+              <a href="{{ route('social-redirect', 'facebook') }}" class="btn btn-info btn-lg h5 text-white d-block mb-3">
+                <span class="fa fa-facebook me-2"></span> Facebook
+              </a>
               <!-- Google -->
-              <a href="{{ route('social-redirect', 'google') }}" class="btn btn-danger text-white btn-lg d-block mb-3"><span class="fa fa-google me-2"></span> Google</a>
-
+              <a href="{{ route('social-redirect', 'google') }}" class="btn btn-danger text-white btn-lg d-block mb-3">
+                <span class="fa fa-google me-2"></span> Google
+              </a>
             </div>
 
             <!-- Spacer -->
@@ -41,32 +43,33 @@
 
                 <!-- Email -->
                 <div class="form-floating mb-3">
-
                   <input 
                   type="email" 
                   id="email" 
                   name="email" 
                   placeholder="{{ Lang::get('common.email') }}" 
-                  class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" 
+                  class="form-control{{ $errors->has('email') || $errors->has('credentials') ? ' is-invalid' : '' }}" 
                   value="{{ isset($errors) && $errors->count() ? old('email') : '' }}">
                   <label for="email">{{ Lang::get('common.email') }}</label>
-                  <div class="invalid-feedback">{!! $errors->first('email') ?? '' !!}</div>
-
+                  <div class="invalid-feedback">
+                    {!! $errors->first('email') ? ucfirst($errors->first('email')) : '' !!}
+                  </div>
                 </div>
                 <!-- Email - END -->
 
                 <!-- Password -->
                 <div class="form-floating mb-3">
-
                   <input 
                   type="password" 
                   id="password" 
                   name="password" 
                   placeholder="{{ Lang::get('common.password') }}" 
-                  class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
+                  class="form-control{{ $errors->has('password') || $errors->has('credentials') ? ' is-invalid' : '' }}">
                   <label for="password">{{ Lang::get('common.password') }}</label>
-                  <div class="invalid-feedback">{!! $errors->first('password') ?? '' !!}</div>
-
+                  <div class="invalid-feedback">
+                    {!! $errors->first('password') ? ucfirst($errors->first('password')) : '' !!}
+                    {!! $errors->first('credentials') ? ucfirst($errors->first('credentials')) : '' !!}
+                  </div>
                 </div>
                 <!-- Password - END -->
 

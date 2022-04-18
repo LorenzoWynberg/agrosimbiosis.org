@@ -141,9 +141,14 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+
+        //Email
+        'email' => [
+            'unique' => 'Email already exists, pick another or try to <a href="' . route(Lang::get('routes.name.login')) . '">login</a>',
+            'exists' => 'Email doesn\'t exist, would you like to <a href="' . route(Lang::get('routes.name.register')) . '">register?</a>',
         ],
+        //Invalid Credentials
+        'credentials' => 'Invalid credentials, please check your email and password',
     ],
 
     /*

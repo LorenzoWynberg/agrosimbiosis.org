@@ -39,24 +39,6 @@ class RegisterRequest extends FormRequest
      */
     public function messages()
     {
-        return [
-            //Name
-            'name.required'     => "Por favor escribir nombre completo",
-            'name.min'          => "El nombre completo debe ser de al menos :min caracteres",
-
-            //Username
-            'username.required' => 'Por favor escribir nombre de usuario deseado',
-            'username.min'      => 'El nombre de usuario debe ser de al menos :min caracteres',
-            'username.unique'   => 'Nombre de usuario ya existe, por favor escoger otro',
-
-            //Email
-            'email.required'    => 'Por favor escribir su correo',
-            'email.unique'      => 'Correo ya existe, por favor escoger otro o intente <a href="' . route(Lang::get('routes.name.login')) . '">iniciar sesion</a>',
-            'email.email'       => 'Formato incorrecto',
-
-            //Password
-            'password.required' => 'Por favor escribir contraseña',
-            'password.min'      => 'Contraseña debe ser de al menos :min caracteres',
-        ];
+        return [];
     }
 }

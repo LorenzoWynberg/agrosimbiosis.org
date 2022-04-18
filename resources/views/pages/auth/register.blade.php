@@ -22,12 +22,14 @@
 
             <!-- Socials -->
             <div class="col-12 col-lg-5 order-lg-3">
-
               <!-- Facebook -->
-              <a href="{{ route('social-redirect', 'facebook') }}" class="btn btn-info btn-lg h5 text-white d-block mb-3"><span class="fa fa-facebook me-2"></span> Facebook</a>
+              <a href="{{ route('social-redirect', 'facebook') }}" class="btn btn-info btn-lg h5 text-white d-block mb-3">
+                <span class="fa fa-facebook me-2"></span> Facebook
+              </a>
               <!-- Google -->
-              <a href="{{ route('social-redirect', 'google') }}" class="btn btn-danger text-white btn-lg d-block mb-3"><span class="fa fa-google me-2"></span> Google</a>
-
+              <a href="{{ route('social-redirect', 'google') }}" class="btn btn-danger text-white btn-lg d-block mb-3">
+                <span class="fa fa-google me-2"></span> Google
+              </a>
             </div>
 
             <!-- Spacer -->
@@ -50,7 +52,9 @@
                     class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" 
                     value="{{ isset($errors) && $errors->count() ? old('name') : '' }}">
                   <label for="name">{{ Lang::get('common.name') }}</label>
-                  <div class="invalid-feedback">{{ $errors->first('name') ?? '' }}</div>
+                  <div class="invalid-feedback">
+                    {!! $errors->first('name') ? ucfirst($errors->first('name')) : '' !!}
+                  </div>
 
                 </div>
                 <!-- Name - END -->
@@ -66,7 +70,9 @@
                   class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}"
                   value="{{ isset($errors) && $errors->count() ? old('username') : '' }}">
                   <label for="email">{{ Lang::get('common.username') }}</label>
-                  <div class="invalid-feedback">{{ $errors->first('username') ?? '' }}</div>
+                  <div class="invalid-feedback">
+                    {!! $errors->first('username') ? ucfirst($errors->first('username')) : '' !!}
+                  </div>
 
                 </div>
                 <!-- Username - END -->
@@ -82,7 +88,9 @@
                   class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" 
                   value="{{ isset($errors) && $errors->count() ? old('email') : '' }}">
                   <label for="email">{{ Lang::get('common.email') }}</label>
-                  <div class="invalid-feedback">{!! $errors->first('email') ?? '' !!}</div>
+                  <div class="invalid-feedback">
+                    {!! $errors->first('email') ? ucfirst($errors->first('email')) : '' !!}
+                  </div>
 
                 </div>
                 <!-- Email - END -->
@@ -97,7 +105,9 @@
                   placeholder="{{ Lang::get('common.password') }}" 
                   class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
                   <label for="password">{{ Lang::get('common.password') }}</label>
-                  <div class="invalid-feedback">{{ $errors->first('password') ?? '' }}</div>
+                  <div class="invalid-feedback">
+                    {!! $errors->first('password') ? ucfirst($errors->first('password')) : '' !!}
+                  </div>
 
                 </div>
                 <!-- Password - END -->

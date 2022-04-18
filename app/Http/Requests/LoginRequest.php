@@ -37,15 +37,6 @@ class LoginRequest extends FormRequest
      */
     public function messages()
     {
-        return [
-            //Email
-            'email.required'        => 'Por favor escribir su correo',
-            'email.email'           => 'Formato incorrecto',
-            'email.exists'          => 'Correo no existe, desea <a href="' . route(Lang::get('routes.name.register')) . '">registrarse?</a>',
-
-            //Password
-            'password.required'     => 'Por favor escribir contraseña',
-            'password.min'          => 'Contraseña debe ser de al menos :min caracteres',
-        ];
+        return [];
     }
 }
