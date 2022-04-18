@@ -65,7 +65,9 @@
               <span class="fa-li position-static"><i class="fas fa-phone"></i></span><span class="ms-2">+506 8329-3003</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li position-static"><i class="fas fa-envelope"></i></span><span class="ms-2">agrosimbiosis@gmail.com</span>
+              <a href="mailto: agrosimbiosis@gmail.com" class="text-white">
+                <span class="fa-li position-static"><i class="fas fa-envelope"></i></span><span class="ms-2">agrosimbiosis@gmail.com</span>
+              </a>
             </li>
             <li class="mb-3">
               <span class="fa-li position-static"><i class="fas fa-home"></i></span><span class="ms-2">Belén, Heredia</span>
