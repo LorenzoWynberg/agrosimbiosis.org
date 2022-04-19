@@ -18,6 +18,7 @@ return [
         'logout' => '/logout',
         'register' => '/registro',
         'catalogue' => '/catalogo',
+        'contact' => '/contacto',
         'team' => [
             'lore' => '/equipo/lorenzo-wynberg',
             'andy' => '/equipo/andy-charpentier',
@@ -30,6 +31,7 @@ return [
         'logout' => 'es.logout',
         'register' => 'es.register',
         'catalogue' => 'es.catalogue',
+        'contact' => 'es.contact',
         'team' => [
             'lore' => 'es.team.lore',
             'andy' => 'es.team.andy',

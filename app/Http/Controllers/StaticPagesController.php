@@ -25,4 +25,9 @@ class StaticPagesController extends Controller
     {
         return view('pages.team.dasha');
     }
+
+    public function contact()
+    {
+        return view('pages.contact');
+    }
 }

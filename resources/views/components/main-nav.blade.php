@@ -22,7 +22,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ isset($active) && $active == 'contact' ? ' active' : '' }}" href="#">
+          <a class="nav-link{{ isset($active) && $active == 'contact' ? ' active' : '' }}" href="{{ route(Lang::get('routes.name.contact')) }}">
             {{ Lang::get('common.contact') }}
           </a>
         </li>

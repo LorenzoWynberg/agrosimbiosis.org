@@ -55,6 +55,9 @@ foreach (config('langs') as $lang)
 		// Catalogue
 		Route::get(__('routes.url.catalogue', [], $lang), [CatalogueController::class, 'index'])->name($lang.'.catalogue');
 
+		// Contact Us
+		Route::get(__('routes.url.contact', [], $lang), [StaticPagesController::class, 'contact'])->name($lang.'.contact');
+
 		// Register
 		Route::get(__('routes.url.register', [], $lang), [AuthController::class, 'register'])->name($lang.'.register')->middleware('guest');
 		Route::post(__('routes.url.register', [], $lang), [AuthController::class, 'registerPost']);

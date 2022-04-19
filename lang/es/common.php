@@ -10,6 +10,7 @@ return [
 
     'brand' => 'Agro Simbiosis',
     'contact' => 'Contacto',
+    'contact-us' => 'Contáctanos',
     'login' => 'Inicia Sesión',
     'logout' => 'Cerrar Sesión',
     'register' => 'Regístrate',
@@ -29,6 +30,7 @@ return [
     'email' => 'Correo',
     'password' => 'Contraseña',
     'continue' => 'Continuar',
+    'message' => 'Mensaje',
 
     //Day Abbreviations
     'mon' => 'Lun',

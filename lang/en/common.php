@@ -10,6 +10,7 @@ return [
 
     'brand' => 'Agro Symbiosis',
     'contact' => 'Contact',
+    'contact-us' => 'Contact Us',
     'login' => 'Login',
     'logout' => 'Logout',
     'register' => 'Register',
@@ -29,7 +30,7 @@ return [
     'email' => 'Email',
     'password' => 'Password',
     'continue' => 'Continue',
-
+    'message' => 'Message',
 
     //Day Abbeviations
     'mon' => 'Mon',
