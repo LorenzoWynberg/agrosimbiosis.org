@@ -7,7 +7,7 @@
 
 @include('components.main-nav', ['active'=>'home'])
 
-<div id="hero">
+<div id="hero" class="--full-height">
   <div class="overlay-gradient">
     <div class="container-fluid">
       <div class="row align-items-end pt-5 pb-5">
