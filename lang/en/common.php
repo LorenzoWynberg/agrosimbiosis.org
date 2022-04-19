@@ -49,4 +49,9 @@ return [
     'friday' => 'Friday',
     'saturday' => 'Saturday',
     'sunday' => 'Sunday',
+
+    //Alerts
+    'alerts' => [
+        'message-success' => 'Your message was sent succesfully!',
+    ],
 ];

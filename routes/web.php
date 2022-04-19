@@ -57,6 +57,7 @@ foreach (config('langs') as $lang)
 
 		// Contact Us
 		Route::get(__('routes.url.contact', [], $lang), [StaticPagesController::class, 'contact'])->name($lang.'.contact');
+		Route::post(__('routes.url.contact', [], $lang), [StaticPagesController::class, 'contactPost']);
 
 		// Register
 		Route::get(__('routes.url.register', [], $lang), [AuthController::class, 'register'])->name($lang.'.register')->middleware('guest');

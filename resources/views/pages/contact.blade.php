@@ -15,6 +15,20 @@
       		<div class="card-header bg-transparent text-secondary"><h3 class="my-2">{{ Lang::get('common.contact-us') }}</h3></div>
       		<div class="card-body">
       			<form action="{{ route(Lang::get('routes.name.contact')) }}" method="post">
+              <!-- Name -->
+              <div class="form-floating mb-3">
+                <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" 
+                type="name" 
+                id="name" 
+                name="name" 
+                placeholder="{{ Lang::get('common.name') }}" 
+                value="{{ old('name') }}{{ auth()->check() && !old('name') ? auth()->user()->name : ''}}">
+                <label for="name">{{ Lang::get('common.name') }}</label>
+                <div class="invalid-feedback">
+                  {!! $errors->first('name') ?? '' !!}
+                </div>
+              </div>
+              <!-- Name - END -->
               <!-- Email -->
               <div class="form-floating mb-3">
                 <input 
@@ -22,8 +36,8 @@
                 id="email" 
                 name="email" 
                 placeholder="{{ Lang::get('common.email') }}" 
-                class="form-control{{ $errors->has('email') || $errors->has('credentials') ? ' is-invalid' : '' }}" 
-                value="{{ isset($errors) && $errors->count() ? old('email') : '' }}">
+                class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" 
+                value="{{ old('email') }}{{ auth()->check() && !old('email') ? auth()->user()->email : ''}}">
                 <label for="email">{{ Lang::get('common.email') }}</label>
                 <div class="invalid-feedback">
                   {!! $errors->first('email') ?? '' !!}
@@ -33,17 +47,23 @@
 
               <!-- Message -->
               <div class="form-floating mb-3">
-	  						<textarea 
-	  						class="form-control{{ $errors->has('message') ? ' is-invalid' : '' }}" 
+	  						<textarea class="form-control{{ $errors->has('message') ? ' is-invalid' : '' }}" 
 	  						id="message" 
+                name="message" 
 	  						placeholder="{{ Lang::get('common.message') }}" 
-	  						rows="7">{{ isset($errors) && $errors->count() ? old('message') : '' }}</textarea>
+	  						rows="7">{{ old('message') }}</textarea>
                 <label for="message">{{ Lang::get('common.message') }}</label>
                 <div class="invalid-feedback">
                   {!! $errors->first('message') ?? '' !!}
                 </div>
               </div>
               <!-- Message - END -->
+
+              @if(session()->has('success'))
+              <div class="alert alert-secondary">
+                {{ Lang::get('common.alerts.message-success') }}
+              </div>
+              @endif
 
               <!-- Submit -->
               <div class="text-end">

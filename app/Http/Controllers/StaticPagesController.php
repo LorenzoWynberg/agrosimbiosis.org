@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Mail\Contact;
+use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\ContactRequest;
 
 class StaticPagesController extends Controller
 {
@@ -29,5 +31,12 @@ class StaticPagesController extends Controller
     public function contact()
     {
         return view('pages.contact');
+    }
+
+    public function contactPost(ContactRequest $request)
+    {
+        Mail::to('info@agrosimbiosis.org')->send(new Contact($request));
+        session()->flash('success', true);
+        return redirect()->back()->withInput();
     }
 }

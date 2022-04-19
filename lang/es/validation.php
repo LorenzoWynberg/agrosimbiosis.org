@@ -166,5 +166,6 @@ return [
         'username' => 'nombre de usuario',
         'email' => 'correo',
         'password' => 'contraseña',
+        'message' => 'mensaje'
     ],
 ];
