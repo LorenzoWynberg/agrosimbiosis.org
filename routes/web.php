@@ -50,6 +50,7 @@ foreach (config('langs') as $lang)
 		// Team
 		Route::get(__('routes.url.team.andy', [], $lang), [StaticPagesController::class, 'andy'])->name($lang.'.team.andy');
 		Route::get(__('routes.url.team.lore', [], $lang), [StaticPagesController::class, 'lore'])->name($lang.'.team.lore');
+		Route::get(__('routes.url.team.ariel', [], $lang), [StaticPagesController::class, 'ariel'])->name($lang.'.team.ariel');
 
 		// Catalogue
 		Route::get(__('routes.url.catalogue', [], $lang), [CatalogueController::class, 'index'])->name($lang.'.catalogue');

@@ -93,7 +93,7 @@
           </div>
           <div class="col-7 col-md-12 text-md-center">
             <h5 class="pt-md-3">Andres Charpentier</h5>
-            <h6>{!! Lang::get('pages/home.team.andy') !!}</h6>
+            <h6>{!! Lang::get('pages/team.andy.title') !!}</h6>
           </div>
         </div>
       </a>
@@ -107,7 +107,21 @@
           </div>
           <div class="col-7 col-md-12 order-1 order-md-2 text-end text-md-center">
             <h5 class="pt-md-3">Lorenzo Wynberg</h5>
-            <h6>{!! Lang::get('pages/home.team.lore') !!}</h6>
+            <h6>{!! Lang::get('pages/team.lore.title') !!}</h6>
+          </div>
+        </div>
+      </a>
+
+      <hr class="my-0 d-md-none">
+
+      <a href="{{ route(Lang::get('routes.name.team.ariel')) }}" class="team-member col-md-4 my-5 text-body">
+        <div class="row d-flex align-items-center">
+          <div class="col-4 offset-1 offset-md-0 col-md-12 d-flex align-items-center">
+            <img src="{{ asset('imgs/team/ariel.jpeg') }}" class="img-fluid rounded-circle" alt="">
+          </div>
+          <div class="col-7 col-md-12 text-md-center">
+            <h5 class="pt-md-3">Ariel Mora</h5>
+            <h6>{!! Lang::get('pages/team.ariel.title') !!}</h6>
           </div>
         </div>
       </a>

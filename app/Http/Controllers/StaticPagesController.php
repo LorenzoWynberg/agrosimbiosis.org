@@ -23,9 +23,9 @@ class StaticPagesController extends Controller
         return view('pages.team.lore');
     }
 
-    public function dasha()
+    public function ariel()
     {
-        return view('pages.team.dasha');
+        return view('pages.team.ariel');
     }
 
     public function contact()

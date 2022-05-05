@@ -34,8 +34,5 @@ return [
     ],
     'team' => [
     	'title' => 'Nuestro Equipo',
-    	'dasha' => 'Ingeniera Agrónoma',
-    	'andy' => 'Ingeniero Agrónomo',
-    	'lore' => 'Hackerman',
     ],
 ];

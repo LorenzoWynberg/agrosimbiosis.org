@@ -18,6 +18,13 @@ return [
         'title' => '&ldquo;Hackerman&rdquo;',
         'content' => 
             '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt autem, ad amet corrupti magni vitae mollitia porro totam illum, natus dignissimos ipsum quibusdam in, suscipit dicta aliquid at laborum sapiente.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. At repudiandae ipsam sapiente architecto consectetur, eos temporibus autem alias! Ut ea ex veniam repellat deserunt consequuntur voluptatibus corrupti? Molestias, labore, fugit.</p>'
-    ]
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. At repudiandae ipsam sapiente architecto consectetur, eos temporibus autem alias! Ut ea ex veniam repellat deserunt consequuntur voluptatibus corrupti? Molestias, labore, fugit.</p>',
+    ],
+    'ariel' => [
+        'title' => 'Development Entrepreneur',
+        'content' => 
+            '<p>Ariel is a development entrepreneur focused on sales and comercial relations. He is also a Vonkelemn Music School bachelor in musical composition.</p>
+            <p>Ariel is a lover of nature, pasionate about development and human behaviour.</p>
+            <p>"We are only in this life experience for a limited time, let\'s try to leave the world a better place than we found it"</p>',
+    ],
 ];

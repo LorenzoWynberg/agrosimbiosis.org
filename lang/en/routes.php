@@ -22,6 +22,7 @@ return [
         'team' => [
             'lore' => '/team/lorenzo-wynberg',
             'andy' => '/team/andy-charpentier',
+            'ariel' => '/team/ariel-mora',
         ],
     ],
     'name' => [
@@ -34,6 +35,7 @@ return [
         'team' => [
             'lore' => 'en.team.lore',
             'andy' => 'en.team.andy',
+            'ariel' => 'en.team.ariel',
         ],
     ],
 ];
