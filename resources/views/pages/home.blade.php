@@ -85,27 +85,13 @@
   <div class="container pt-5 pb-md-5">
     <h2 class="text-center py-3">{!! Lang::get('pages/home.team.title') !!}</h2>
     <div class="row">
-
-      <a href="{{ route(Lang::get('routes.name.team.dasha')) }}" class="team-member col-md-4 my-5 text-body">
-        <div class="row d-flex align-items-center">
-          <div class="col-4 offset-1 offset-md-0 col-md-12 d-flex align-items-center">
-            <img src="{{ asset('imgs/team/dasha.jpg') }}" class="img-fluid rounded-circle" alt="">
-          </div>
-          <div class="col-7 col-md-12 text-md-center">
-            <h5 class="pt-md-3">Dasha Montcalm</h5>
-            <h6>{!! Lang::get('pages/home.team.dasha') !!}</h6>
-          </div>
-        </div>
-      </a>
-
-      <hr class="my-0 d-md-none">
       
       <a href="{{ route(Lang::get('routes.name.team.andy')) }}" class="team-member col-md-4 my-5 text-body">
         <div class="row d-flex align-items-center">
-          <div class="col-4 col-md-12 order-2 order-md-1 d-flex align-items-center">
+          <div class="col-4 offset-1 offset-md-0 col-md-12 d-flex align-items-center">
             <img src="{{ asset('imgs/team/andy.jpg') }}" class="img-fluid rounded-circle" alt="">
           </div>
-          <div class="col-7 col-md-12 order-1 order-md-2 text-end text-md-center">
+          <div class="col-7 col-md-12 text-md-center">
             <h5 class="pt-md-3">Andres Charpentier</h5>
             <h6>{!! Lang::get('pages/home.team.andy') !!}</h6>
           </div>
@@ -116,10 +102,10 @@
       
       <a href="{{ route(Lang::get('routes.name.team.lore')) }}" class="team-member col-md-4 my-5 text-body">
         <div class="row d-flex align-items-center">
-          <div class="col-4 offset-1 offset-md-0 col-md-12 d-flex align-items-center">
+          <div class="col-4 col-md-12 order-2 order-md-1 d-flex align-items-center">
             <img src="{{ asset('imgs/team/lore.jpg') }}" class="img-fluid rounded-circle" alt="">
           </div>
-          <div class="col-7 col-md-12 text-md-center">
+          <div class="col-7 col-md-12 order-1 order-md-2 text-end text-md-center">
             <h5 class="pt-md-3">Lorenzo Wynberg</h5>
             <h6>{!! Lang::get('pages/home.team.lore') !!}</h6>
           </div>
