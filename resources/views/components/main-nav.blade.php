@@ -31,20 +31,18 @@
             {{ Lang::get('common.lang') }}
           </a>
           <ul id="lang-dropdown" class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="dropdown-lang">
-            @if(isset($translatedRouteParams))
-              @foreach($translatedRouteParams as $lang => $params)
-                <li class="nav-item">
-                  <a class="dropdown-item nav-link" href="{{ route(translateCurrentRouteName($lang), $translatedRouteParams) }}">{{ Str::upper($lang) }}</a>
-                </li>
-              @endforeach
-            @else
-              @foreach(config('langs') as $lang)
-                <li class="nav-item">
-                  <a class="dropdown-item nav-link" href="{{ route(translateCurrentRouteName($lang)) }}">{{ Str::upper($lang) }}</a>
-                </li>
-              @endforeach
-            @endif
-          </ul>
+            @foreach(config('langs') as $lang)
+              <li class="nav-item">
+                @if(isset($routeParams))
+                  @if(isset($routeParams[$lang]))
+                    <a class="dropdown-item nav-link" href="{{ translateCurrentRoute($lang, $routeParams[$lang]) }}">{{ Str::upper($lang) }}</a>
+                  @endif
+                @else
+                  <a class="dropdown-item nav-link" href="{{ translateCurrentRoute($lang) }}">{{ Str::upper($lang) }}</a>
+                @endif
+              </li>
+            @endforeach
+          </ul> 
         </li>
         @auth
           <li class="nav-item d-lg-none">
