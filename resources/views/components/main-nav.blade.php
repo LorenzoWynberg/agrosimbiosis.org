@@ -11,7 +11,7 @@
             {{ Lang::get('common.team') }}
           </a>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
           <a class="nav-link{{ isset($active) && $active == 'catalogue' ? ' active' : '' }}" href="{{ route(Lang::get('routes.name.catalogue')) }}">
             {{ Lang::get('common.catalogue') }}
           </a>
@@ -20,7 +20,7 @@
           <a class="nav-link" href="#">
             {{ Lang::get('common.blog') }}
           </a>
-        </li>
+        </li> --}}
         <li class="nav-item">
           <a class="nav-link{{ isset($active) && $active == 'contact' ? ' active' : '' }}" href="{{ route(Lang::get('routes.name.contact')) }}">
             {{ Lang::get('common.contact') }}
