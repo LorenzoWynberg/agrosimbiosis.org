@@ -32,15 +32,17 @@
           </a>
           <ul id="lang-dropdown" class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="dropdown-lang">
             @foreach(config('langs') as $lang)
-              <li class="nav-item">
-                @if(isset($routeParams))
-                  @if(isset($routeParams[$lang]))
-                    <a class="dropdown-item nav-link" href="{{ translateCurrentRoute($lang, $routeParams[$lang]) }}">{{ Str::upper($lang) }}</a>
+              @if($lang !== app()->getLocale())
+                <li class="nav-item">
+                  @if(isset($routeParams))
+                    @if(isset($routeParams[$lang]))
+                      <a class="dropdown-item nav-link" href="{{ translateCurrentRoute($lang, $routeParams[$lang]) }}">{{ Str::upper($lang) }}</a>
+                    @endif
+                  @else
+                    <a class="dropdown-item nav-link" href="{{ translateCurrentRoute($lang) }}">{{ Str::upper($lang) }}</a>
                   @endif
-                @else
-                  <a class="dropdown-item nav-link" href="{{ translateCurrentRoute($lang) }}">{{ Str::upper($lang) }}</a>
-                @endif
-              </li>
+                </li>
+              @endif
             @endforeach
           </ul> 
         </li>
