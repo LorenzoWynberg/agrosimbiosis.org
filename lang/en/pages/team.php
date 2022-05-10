@@ -12,13 +12,14 @@ return [
         'title' => 'Agricultural Engineer',
         'content' => 
             '<p>José Andres Charpentier Jiménez, farmer, Earth University agricultural engineer graduate. Andy has had an international experience in the Kaima Organic Farming faire in Israel. Andy is also a nature, medicinal plants and agro-ecology lover.</p>
-            <p>&ldquo;We are what we eat and if we don\'t know what we eat, we dont know who we are and we loose our conection to our food; regaining that connection to healthy and nutritious food, as well as protecting and regenerating the planet are the main pillars of my life.&rdquo;</p>',
+            <p>"We are what we eat and if we don\'t know what we eat, we dont know who we are and we loose our conection to our food; regaining that connection to healthy and nutritious food, as well as protecting and regenerating the planet are the main pillars of my life."</p>',
     ],
     'lore' => [
-        'title' => '&ldquo;Hackerman&rdquo;',
+        'title' => 'Web Developer',
         'content' => 
-            '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt autem, ad amet corrupti magni vitae mollitia porro totam illum, natus dignissimos ipsum quibusdam in, suscipit dicta aliquid at laborum sapiente.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. At repudiandae ipsam sapiente architecto consectetur, eos temporibus autem alias! Ut ea ex veniam repellat deserunt consequuntur voluptatibus corrupti? Molestias, labore, fugit.</p>',
+            '<p>Lorenzo is passionate about nature, music and coding.</p>
+            <p>Lorenzo focuses on the tecnical aspects of the project\'s development; as well as mantaining and growing the website</p>
+            <p>"If you\'re gonna do something, do it right or don\'t do it at all!"</p>',
     ],
     'ariel' => [
         'title' => 'Development Entrepreneur',
