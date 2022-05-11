@@ -25,7 +25,8 @@
 	
 
 @include media-breakpoint-up(lg)
-	#main-nav 
+	#main-nav
+		.container-fluid
 		.nav-item
 			.nav-link
 				margin-left: $spacer/2
@@ -46,7 +47,7 @@
 @include media-breakpoint-down(lg)
 	#main-nav
 		.navbar-collapse
-			height: 201px
+			//height: 201px
 			width: 180px
 			overflow: scroll
 			border-left: 1px solid $success
@@ -59,8 +60,8 @@
 			.navbar-nav
 				background-color: transparent
 		.nav-item
-			&:last-child .nav-link
-				border-radius: 0 0 0 $border-radius
+			//&:last-child .nav-link
+				//border-radius: 0 0 0 $border-radius
 			.nav-link
 				padding-left: $spacer
 				padding-right: $spacer

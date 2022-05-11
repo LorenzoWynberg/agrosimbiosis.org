@@ -32,22 +32,22 @@
     <div class="row text-center my-5">
       <div class="col-12 col-sm-6 col-lg-3 my-5">
        <img src="{{ asset('imgs/icons/health.png') }}" width="200" alt="">
-       <h3 class="mt-2">{!! Lang::get('pages/home.pillars.health') !!}</h3>
+       <h3 class="mt-3">{!! Lang::get('pages/home.pillars.health') !!}</h3>
       </div>
       <hr class="d-sm-none">
       <div class="col-12 col-sm-6 col-lg-3 my-5">
         <img src="{{ asset('imgs/icons/regeneration.png') }}" width="200" alt="">
-        <h3 class="mt-2">{!! Lang::get('pages/home.pillars.regeneration') !!}</h3>
+        <h3 class="mt-3">{!! Lang::get('pages/home.pillars.regeneration') !!}</h3>
       </div>
       <hr class="d-lg-none">
       <div class="col-12 col-sm-6 col-lg-3 my-5">
         <img src="{{ asset('imgs/icons/symbiosis.png') }}" width="200" alt="">
-        <h3 class="mt-2">{!! Lang::get('pages/home.pillars.symbiosis') !!}</h3>
+        <h3 class="mt-3">{!! Lang::get('pages/home.pillars.symbiosis') !!}</h3>
       </div>
       <hr class="d-sm-none">
       <div class="col-12 col-sm-6 col-lg-3 my-5">
         <img src="{{ asset('imgs/icons/empathy.png') }}" width="200" alt="">
-        <h3 class="mt-2">{!! Lang::get('pages/home.pillars.empathy') !!}</h3>
+        <h3 class="mt-3">{!! Lang::get('pages/home.pillars.empathy') !!}</h3>
       </div>
     </div>
   </div>

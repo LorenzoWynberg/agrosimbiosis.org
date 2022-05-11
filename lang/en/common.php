@@ -17,7 +17,7 @@ return [
     'catalogue' => 'Catalogue',
     'blog' => 'Blog',
     'team' => 'Team',
-    'lang' => 'Lang',
+    'lang' => 'Language',
     'search' => 'Search',
     'socials' => 'Social Networks',
     'donations' => 'Donations',

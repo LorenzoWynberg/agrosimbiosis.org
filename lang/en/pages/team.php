@@ -18,7 +18,8 @@ return [
         'title' => 'Web Developer',
         'content' => 
             '<p>Lorenzo is passionate about nature, music and coding.</p>
-            <p>Lorenzo focuses on the tecnical aspects of the project\'s development; as well as mantaining and growing the website</p>
+            <p>He focuses on the tecnical aspects of the project\'s development; as well as mantaining and growing the website</p>
+            <p>Lorenzo is also a firm believer of decentralization of government and money.</p>
             <p>"If you\'re gonna do something, do it right or don\'t do it at all!"</p>',
     ],
     'ariel' => [

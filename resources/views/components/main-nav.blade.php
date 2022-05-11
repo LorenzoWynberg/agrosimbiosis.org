@@ -1,11 +1,11 @@
 <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container-fluid ">
+  <div class="container-fluid container-lg">
     <a class="navbar-brand" href="{{ route(Lang::get('routes.name.home')) }}">{{ Lang::get('common.brand') }}</a>
     <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#nav-links" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-icon fa fa-bars"></span>
     </button>
     <div class="collapse navbar-collapse" id="nav-links">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link{{ isset($active) && $active == 'team' ? ' active' : '' }}" href="{{ route(Lang::get('routes.name.home')) . '/#team' }}">
             {{ Lang::get('common.team') }}
@@ -46,7 +46,7 @@
             @endforeach
           </ul> 
         </li>
-        @auth
+        {{-- @auth
           <li class="nav-item d-lg-none">
             <form action="/logout" method="post">
               <a class="nav-link" href="{{ route(Lang::get('routes.name.logout')) }}">
@@ -66,9 +66,9 @@
               {{ Lang::get('common.register') }}
             </a>
           </li>
-        @endguest
+        @endguest --}}
       </ul>
-      <div class="d-none d-flex d-lg-flex">
+      {{-- <div class="d-none d-flex d-lg-flex">
         <form action="" class="me-2">
           <input class="form-control outline-info" type="search" placeholder="{{ Lang::get('common.search') }}" aria-label="Search">
         </form>
@@ -97,7 +97,7 @@
             </ul>
           </div>
         @endguest
-      </div>
+      </div> --}}
     </div>
     <!-- .collapse END -->
   </div>
