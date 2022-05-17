@@ -17,9 +17,9 @@ return [
     'lore' => [
     	'title' => 'Desarrollador Web',
     	'content' => 
-    		'<p>A Lorenzo le apaciona la naturaleza, la musica y la programacion.</p>
-            <p>Se enfoca en las areas tecnicas del desarrollo del proyecto; al igual que mantener el sitio y velar por su crecimiento.</p>
-            <p>Lorenzo es un fiel creyente en la desentralizacion del poder politico y del el dinero.</p>
+    		'<p>A Lorenzo le apasiona la naturaleza, la música y la programación.</p>
+            <p>Se enfoca en las áreas técnicas del desarrollo del proyecto; al igual que mantener el sitio y velar por su crecimiento.</p>
+            <p>Lorenzo es un fiel creyente en la descentralización del poder político y del dinero.</p>
 			<p>"¡Si vas a hacer algo hazlo bien o mejor ni lo hagas!"</p>',
     ],
     'ariel' => [
