@@ -10,11 +10,11 @@
           <h5 class="text-uppercase mb-3">{{ Lang::get('common.socials') }}</h5>
           <div class="mb-4">
             <!-- Facebook -->
-            <a href="https://www.facebook.com/Agro-simbiosis-100102512649645" class="btn btn-floating btn-light p-2">
+            <a href="https://www.facebook.com/Agro-simbiosis-100102512649645" class="btn btn-floating btn-light p-2 external-link">
               <img src="{{ asset('imgs/icons/fb.png') }}" width="30px" alt="">
             </a>
             <!-- Instagram -->
-            <a href="https://www.instagram.com/agrosimbiosis/" class="btn btn-floating btn-light p-2">
+            <a href="https://www.instagram.com/agrosimbiosis/" class="btn btn-floating btn-light p-2 external-link">
               <img src="{{ asset('imgs/icons/ig.png') }}" width="30px" alt="">
             </a>
             <!-- Youtube -->
