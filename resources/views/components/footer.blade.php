@@ -10,13 +10,17 @@
           <h5 class="text-uppercase mb-3">{{ Lang::get('common.socials') }}</h5>
           <div class="mb-4">
             <!-- Facebook -->
-            <a href="#" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/fb.png') }}" width="30px" alt=""></a>
+            <a href="https://www.facebook.com/Agro-simbiosis-100102512649645" class="btn btn-floating btn-light p-2">
+              <img src="{{ asset('imgs/icons/fb.png') }}" width="30px" alt="">
+            </a>
             <!-- Instagram -->
-            <a href="#" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/ig.png') }}" width="30px" alt=""></a>
+            <a href="https://www.instagram.com/agrosimbiosis/" class="btn btn-floating btn-light p-2">
+              <img src="{{ asset('imgs/icons/ig.png') }}" width="30px" alt="">
+            </a>
             <!-- Youtube -->
-            <a href="#" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/yt.png') }}" width="30px" alt=""></a>
+            {{-- <a href="#" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/yt.png') }}" width="30px" alt=""></a> --}}
             <!-- Twitter -->
-            <a href="#" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/twitter.png') }}" width="30px" alt=""></a>
+            {{-- <a href="#" class="btn btn-floating btn-light p-2"><img src="{{ asset('imgs/icons/twitter.png') }}" width="30px" alt=""></a> --}}
           </div>
           <h5 class="text-uppercase mb-3">{{ Lang::get('common.donations') }}</h5>
           <div>
@@ -67,8 +71,8 @@
               </a>
             </li>
             <li class="mb-3">
-              <a href="mailto: agrosimbiosis@gmail.com" class="text-white">
-                <span class="fa-li position-static"><i class="fas fa-envelope"></i></span><span class="ms-2">agrosimbiosis@gmail.com</span>
+              <a href="mailto: info@agrosimbiosis.org" class="text-white">
+                <span class="fa-li position-static"><i class="fas fa-envelope"></i></span><span class="ms-2">info@agrosimbiosis.org</span>
               </a>
             </li>
             <li class="mb-3">
