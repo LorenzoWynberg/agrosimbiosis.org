@@ -15,6 +15,15 @@
       		<div class="card-header bg-transparent text-secondary"><h3 class="my-2">{{ Lang::get('common.contact-us') }}</h3></div>
       		<div class="card-body">
       			<form action="{{ route(Lang::get('routes.name.contact')) }}" method="post">
+
+              <!-- Success Message -->
+              @if(session()->has('success'))
+              <div class="alert alert-secondary">
+                {{ Lang::get('common.alerts.message-success') }}
+              </div>
+              @endif
+              <!-- Success Message - END -->
+
               <!-- Name -->
               <div class="form-floating mb-3">
                 <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" 
@@ -29,6 +38,7 @@
                 </div>
               </div>
               <!-- Name - END -->
+
               <!-- Email -->
               <div class="form-floating mb-3">
                 <input 
@@ -58,12 +68,6 @@
                 </div>
               </div>
               <!-- Message - END -->
-
-              @if(session()->has('success'))
-              <div class="alert alert-secondary">
-                {{ Lang::get('common.alerts.message-success') }}
-              </div>
-              @endif
 
               <!-- Submit -->
               <div class="text-end">
