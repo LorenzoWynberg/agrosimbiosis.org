@@ -31,8 +31,7 @@ class Contact extends Mailable
      */
     public function build()
     {
-        return $this->from($this->request->email, $this->request->name)
-                    ->subject(__('common.contact'))
+        return $this->subject(__('common.contact'))
                     ->markdown('emails.contact');
     }
 }
