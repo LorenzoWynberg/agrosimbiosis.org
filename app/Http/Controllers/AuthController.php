@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\Request;
+use App\Models\SocialProvider;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Lang;
 use App\Http\Requests\RegisterRequest;
-use Illuminate\Http\Request;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
@@ -24,36 +27,72 @@ class AuthController extends Controller
     {
         if (Auth::attempt($request->except('_token'))) {
             $request->session()->regenerate();
-            return redirect()->route('home');
+            return redirect()->route(Lang::get('routes.name.home'));
         }
- 
+
         return back()->withErrors([
-            'email' => 'Correo no encontrado, desea <a href="' . route('register') . '">crear una cuenta?</a>',
-            'password' => 'Contraseña incorrecta',
-        ]);
+            'credentials' => Lang::get('validation.custom.credentials'),
+        ])->withInput();
     }
 
     public function registerPost(RegisterRequest $request)
     {
-        $user = User::create(request(['name', 'email', 'password', 'username']));
+        $user = User::create($request->except('_token'));
         Auth::login($user);
-        return redirect()->route('home');
+        return redirect()->route(Lang::get('routes.name.home'));
     }
 
-    /**
-     * Log the user out of the application.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function logout(Request $request)
     {
         Auth::logout();
-     
         $request->session()->invalidate();
-     
         $request->session()->regenerateToken();
-     
-        return redirect()->route('home');
+        return redirect()->route(Lang::get('routes.name.home'));
+    }
+
+    public function socialRedirect($social)
+    {
+        return Socialite::driver($social)->redirect();
+    }
+
+    public function socialCallback($social)
+    {
+        $userSocial = Socialite::driver($social)->stateless()->user();
+        $socialProvider = SocialProvider::where('external_id', $userSocial->id)->where('external_auth', $social)->first();
+        $userExists = false;
+        $userNeedsProvider = false;
+
+        if ($socialProvider) {
+            $userExists = $socialProvider->user()->first();
+        }
+
+        if (!$userExists) {
+            $userNeedsProvider = true;
+            $userExists = User::where('email', $userSocial->email)->first();
+        }
+
+        if (!$userExists) {
+            $userExists = User::create(
+                [
+                    'name' => $userSocial->name,
+                    'username' => $userSocial->name,
+                    'email' => $userSocial->email, 
+                    'avatar' => $userSocial->avatar,
+                ]
+            );
+        }
+
+        if ($userNeedsProvider) {
+            SocialProvider::create(
+                [
+                    'user_id' => $userExists->id,
+                    'external_id' => $userSocial->id,
+                    'external_auth' => $social,
+                ]
+            );
+        }
+
+        Auth::login($userExists);
+        return redirect()->route(Lang::get('routes.name.home'));
     }
 }

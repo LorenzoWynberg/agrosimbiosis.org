@@ -26,6 +26,7 @@ mix.webpackConfig({
 }).options({processCssUrls: false});
 
 mix.js("resources/js/app.js", "public/js")
+    .js("resources/js/external-links.js", "public/js")
 	.sass("resources/sass/app.sass", "public/css")
 	.version()
 	.browserSync({

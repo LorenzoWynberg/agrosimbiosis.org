@@ -1,4 +1,4 @@
 //import 'jquery';
-import '@popperjs/core'; // Edit here
+import '@popperjs/core';
 import 'bootstrap/dist/js/bootstrap.bundle';
 require('./bootstrap');

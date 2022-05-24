@@ -11,10 +11,11 @@
     <div id="wrapper">
       @yield('content')
     </div>
-    @include('components.modals.donations')
+    @include('components.modals.donations', ['tokens' => ['BTC'=>'BTC','ETH'=>'ETH','BNB'=>'BSC']])
     @include('components.footer')
     <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
     <script src="https://kit.fontawesome.com/721bcd191b.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ mix('js/external-links.js') }}"></script>
     @yield('scripts')
   </body>
 </html>

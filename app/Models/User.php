@@ -23,6 +23,7 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
+        'avatar',
     ];
 
     /**
@@ -51,5 +52,13 @@ class User extends Authenticatable
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = Hash::make($password);
+    }
+
+    /**
+     * Get the social providers for the user.
+     */
+    public function socialProviders()
+    {
+        return $this->hasMany(SocialProvider::class);
     }
 }

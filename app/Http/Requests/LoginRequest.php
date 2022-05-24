@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Support\Facades\Lang;
 use Illuminate\Foundation\Http\FormRequest;
 
 class LoginRequest extends FormRequest
@@ -36,15 +37,6 @@ class LoginRequest extends FormRequest
      */
     public function messages()
     {
-        return [
-            //Email
-            'email.required'        => 'Por favor escribir su correo',
-            'email.email'           => 'Formato incorrecto',
-            'email.exists'          => 'Correo no existe, desea <a href="' . route('register') . '">registrarse?</a>',
-
-            //Password
-            'password.required'     => 'Por favor escribir contraseña',
-            'password.min'          => 'Contraseña debe ser de al menos :min caracteres',
-        ];
+        return [];
     }
 }
