@@ -52,7 +52,7 @@ foreach (config('langs') as $lang) {
 		Route::get(__('routes.url.team.ariel', [], $lang), [StaticPagesController::class, 'ariel'])->name($lang . '.team.ariel');
 
 		// Catalogue
-		Route::get(__('routes.url.catalogue', [], $lang), [CatalogueController::class, 'index'])->name($lang . '.catalogue');
+		Route::get(__('routes.url.catalogue-wholesale', [], $lang), [CatalogueController::class, 'indexWholeSale'])->name($lang . '.catalogue-wholesale');
 
 		// Contact Us
 		Route::get(__('routes.url.contact', [], $lang), [StaticPagesController::class, 'contact'])->name($lang . '.contact');

@@ -15,6 +15,17 @@ class CatalogueController extends Controller
 	 */
 	public function index()
 	{
+		return true;
+		//return view('pages.catalogue.index');
+	}
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function indexWholeSale()
+	{
 		$file = public_path() . '/media/' . 'catalogo.pdf';
 		$file = File::get($file);
 		$response = Response::make($file, 200);
